@@ -125,6 +125,7 @@
       </div>
     </li>
 
+    <!-- Value Added Service -->
     <li class="nav-item">
       <a class="nav-link" (click)="valAdServCollapsed = !valAdServCollapsed" [attr.aria-expanded]="valAdServCollapsed"
         aria-controls="auth">
@@ -218,6 +219,8 @@
               #blankPage="routerLinkActive"> Blank Page </a></li>
           <li class="nav-item"> <a class="nav-link" routerLink="user-pages/login" routerLinkActive="active"
               #login="routerLinkActive"> Login </a></li>
+          <li class="nav-item"> <a class="nav-link" routerLink="user-pages/logout" routerLinkActive="active"
+              #login="routerLinkActive"> Logout </a></li>
           <li class="nav-item"> <a class="nav-link" routerLink="user-pages/register" routerLinkActive="active"
               #register="routerLinkActive"> Register </a></li>
           <li class="nav-item"> <a class="nav-link" routerLink="error-pages/404" routerLinkActive="active"
