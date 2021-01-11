@@ -1,49 +1,46 @@
 <div class="d-flex align-items-center auth px-0">
   <div class="row w-100 mx-0">
-    <div class="col-lg-4 mx-auto">
+    <div class="col-md-6">
       <div class="auth-form-light text-left py-5 px-4 px-sm-5">
         <div class="brand-logo">
           <img src="assets/images/logo.svg" alt="logo">
         </div>
-        <h4>New here?</h4>
-        <h6 class="font-weight-light">Signing up is easy. It only takes a few steps</h6>
-        <form class="pt-3">
-          <div class="form-group">
-            <input type="text" class="form-control form-control-lg" id="exampleInputUsername1" placeholder="Username">
-          </div>
-          <div class="form-group">
-            <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="Email">
-          </div>
-          <div class="form-group">
-            <select class="form-control form-control-lg" id="exampleFormControlSelect2">
-              <option>Country</option>
-              <option>United States of America</option>
-              <option>United Kingdom</option>
-              <option>India</option>
-              <option>Germany</option>
-              <option>Argentina</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Password">
-          </div>
-          <div class="mb-4">
-            <div class="form-check">
-              <label class="form-check-label text-muted">
-                <input type="checkbox" class="form-check-input">
-                <i class="input-helper"></i>
-                I agree to all Terms & Conditions
-              </label>
-            </div>
-          </div>
-          <div class="mt-3">
-            <a class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" routerLink="/dashboard">SIGN UP</a>
-          </div>
-          <div class="text-center mt-4 font-weight-light">
-            Already have an account? <a routerLink="/login" class="text-primary">Login</a>
-          </div>
-        </form>
+        <div class="form-group">
+          <label>Upload Adhar Card (Front Page)</label>
+          <input type='file' class="form-control" (change)="onSelectAdharFront($event)" required>
+        </div>
+        <div class="form-group">
+          <label>Upload Adhar Card (Back Page)</label>
+          <input type='file' class="form-control" (change)="onSelectAdharBack($event)" required>
+        </div>
+        <div class="form-group">
+          <label>Upload PAN Card</label>
+          <input type='file' class="form-control" (change)="onSelectPan($event)" required>
+        </div>
+        <div class="form-group">
+          <label>Upload Photography</label>
+          <input class="form-control" type='file' (change)="onSelectPhoto($event)" required>
+        </div>
+        <div class="mt-3">
+          <button class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn"
+            type="submit">Register</button>
+        </div>
+        <div class="text-center mt-4 font-weight-light">
+          Already have an account? <a routerLink="/user-pages/login" class="text-primary">Login</a>
+        </div>
       </div>
     </div>
+
+    <div class="col-md-6 doc-prv">
+      <div class="auth-form-light text-left py-5 px-4 px-sm-5">
+        <h3>Document Preview</h3>
+        <img [src]="url_adharFront" height="160">
+        <img [src]="url_adharBack" height="160">
+        <img [src]="url_pan" height="160">
+        <img [src]="url_photo" height="160">
+      </div>
+    </div>
+
+
   </div>
 </div>
