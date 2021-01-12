@@ -130,17 +130,15 @@
 
 .account-details .card {
   width: 500px;
-  margin-bottom: 20px;
-  position: relative;
-  -webkit-box-shadow: 3px 5px 14px -8px rgba(0, 0, 0, 0.81),
-    3px 5px 14px -8px rgba(0, 0, 0, 0.81);
+  margin: 20px 0;
+
+  transition: box-shadow 0.3s;
+}
+.account-details .card:hover {
   box-shadow: 3px 5px 14px -8px rgba(0, 0, 0, 0.81),
     3px 5px 14px -8px rgba(0, 0, 0, 0.81);
 }
-.account-details .card .a {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0px;
-  left: 0px;
+
+.account-details .card .btn {
+  margin-top: 10px;
 }
