@@ -7,13 +7,15 @@
         </p> -->
         <form class="forms-sample">
             <div class="form-group">
-                <label>Name of Applicant</label>
                 <div class="row">
                     <div class="col-md-6">
-                        <input type="text" class="form-control" placeholder="First Name">
+                        <label for="loanNumber">Loan Number</label>
+                        <input type="text" class="form-control" id="loanNumber" placeholder="Enter Loan Number"
+                            required>
                     </div>
                     <div class="col-md-6">
-                        <input type="text" class="form-control" placeholder="Last Name">
+                        <label>Loan ID</label>
+                        <input type="text" class="form-control" disabled required>
                     </div>
                 </div>
             </div>
@@ -21,66 +23,81 @@
             <div class="form-group">
                 <div class="row">
                     <div class="col-md-6">
-                        <label>Email of Applicant</label>
-                        <input type="email" class="form-control" placeholder="Email Address">
+                        <label>Bank Customer</label>
+                        <select class="form-control" required>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
                     </div>
                     <div class="col-md-6">
-                        <label>Phone Number</label>
-                        <div class="row">
-                            <div class="col-md-3">
-                                <select id="isd-code" class="form-control">
-                                    <option value="volvo">+91</option>
-                                    <option value="saab">+11</option>
-                                    <option value="vw">+81</option>
-                                </select>
-                            </div>
-                            <div class="col-md-9">
-                                <input type="tel" class="form-control" placeholder="Phone Number">
-                            </div>
+                        <label>Bank Account Number</label>
+                        <input type="number" class="form-control" placeholder="Enter Bank Account Number" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-6">
+                        <label>Bank Name</label>
+                        <input type="text" class="form-control" placeholder="Enter Bank Name" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label>IFSC Code</label>
+                        <input type="text" class="form-control" placeholder="Enter IFSC Code" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-6">
+                        <label>Loan Amount</label>
+                        <input type="number" class="form-control" placeholder="Enter Loan Amount" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label>Tenure</label>
+                        <input type="number" step="1" pattern="\d+" class="form-control" placeholder="Enter Tenure"
+                            required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-6">
+                        <label>Gurant1</label>
+                        <input type="text" class="form-control" placeholder="Enter Gurant1" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label>Gurant2</label>
+                        <input type="text" class="form-control" placeholder="Enter Gurant2" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-6">
+                        <label>Date of Application</label>
+                        <input type="date" class="form-control" placeholder="Enter Date of Application\" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label>Upload Photo</label>
+                        <div class="input-group">
+                            <input type="file" style="display: none;" #photoInput required>
+                            <input type="text" class="form-control file-upload-info" placeholder="Upload Photocopy"
+                                disabled>
+                            <span class="input-group-append">
+                                <button class="file-upload-browse btn btn-gradient-primary" type="button"
+                                    (click)="photoInput.click()">Upload</button>
+                            </span>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="form-group">
-                <label>Address</label>
-                <div class="row">
-                    <div class="col-md-6">
-                        <input type="text" class="form-control" placeholder="Area Address">
-                    </div>
-                    <div class="col-md-6">
-                        <input type="text" class="form-control" placeholder="Landmark (optional)">
-                    </div>
-                </div>
-                <div class="row mt-4">
-                    <div class="col-md-4">
-                        <input type="text" class="form-control" placeholder="City">
-                    </div>
-                    <div class="col-md-4">
-                        <input type="text" class="form-control" placeholder="State">
-                    </div>
-                    <div class="col-md-4">
-                        <input type="text" class="form-control" placeholder="PIN">
-                    </div>
-                </div>
-            </div>
-            <div class="form-group">
-                <label>Password</label>
-                <input type="password" class="form-control" placeholder="Password">
-            </div>
-            <div class="form-group">
-                <label>Confirm Password</label>
-                <input type="password" class="form-control" placeholder="Password">
-            </div>
-            <!-- <div class="form-check form-check-flat form-check-primary">
-                <label class="form-check-label">
-                    <input type="checkbox" class="form-check-input">
-                    Remember me
-                    <i class="input-helper"></i>
-                </label>
-            </div> -->
-            <button type="submit" class="btn btn-gradient-primary mr-2">Submit</button>
-            <button class="btn btn-light">Cancel</button>
+            <button type="submit" class="btn btn-success mr-2">Submit</button>
         </form>
     </div>
 </div>
