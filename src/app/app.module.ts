@@ -28,7 +28,7 @@ import { TodoListComponent } from './apps/todo-list/todo-list.component';
     TodoListComponent,
     TodoComponent,
     SpinnerComponent,
-    ContentAnimateDirective,    
+    ContentAnimateDirective,
   ],
   imports: [
     BrowserModule,
