@@ -1,4 +1,17 @@
+.bg-img {
+  min-height: 100vh;
+  width: 100%;
+  background: url("../../../assets/images/samples/1280x768/16.jpg") no-repeat
+    center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 .doc-prv img {
   border: 1px solid rgb(185, 184, 184);
   margin: 10px;
+}
+.auth-form-light {
+  margin-top: 90px;
 }
