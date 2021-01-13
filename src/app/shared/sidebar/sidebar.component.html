@@ -28,24 +28,31 @@
         aria-controls="auth">
         <span class="menu-title">Account</span>
         <i class="menu-arrow"></i>
+        <i class="mdi mdi-account menu-icon"></i>
       </a>
       <div class="collapse" [ngbCollapse]="!accountCollapsed">
-        <ul class="nav flex-column sub-menu">
-          <li class="nav-item">
-            <a class="nav-link">Account Overview</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link">Balance,Quick Transactions</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link">Fund Transfer</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link">Transactions</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link">Statement Generation</a>
-          </li>
+        <ul class="nav flex-column sub-menu">          
+          <li class="nav-item"> <a class="nav-link" routerLink="Accounts/Account-overview" routerLinkActive="active"
+            #accountoverview="routerLinkActive">Account Overview</a></li>         
+          <li class="nav-item">            
+            <a class="nav-link" (click)="FundCollapsed = !FundCollapsed" [attr.aria-expanded]="FundCollapsed"
+              aria-controls="auth">
+              <span class="sub menu-title">Fund Transfer</span>
+              <i class="menu-arrow"></i>        
+            </a>
+            <div class="collapse" [ngbCollapse]="!FundCollapsed">
+              <ul class="nav flex-column sub-menu"> 
+                <li class="nav-item">                  
+                  <a class="nav-link" routerLink="Accounts/Fund-Transfer" routerLinkActive="active"
+            #accountoverview="routerLinkActive">Add Beneficiaries</a>
+                </li>    
+                <li class="nav-item">                  
+                  <a class="nav-link" routerLink="Accounts/Transaction" routerLinkActive="active"
+            #accountoverview="routerLinkActive">Transaction</a>
+                </li>           
+              </ul>
+            </div>
+          </li>    
         </ul>
       </div>
     </li>
@@ -59,8 +66,9 @@
       </a>
       <div class="collapse" [ngbCollapse]="!depositsCollapsed">
         <ul class="nav flex-column sub-menu">
-          <li class="nav-item">
-            <a class="nav-link">Opening Deposits</a>
+          <li class="nav-item">            
+            <a class="nav-link" routerLink="Deposit/opening-deposit" routerLinkActive="active"
+            #accountoverview="routerLinkActive">Opening Deposits</a>
           </li>
           <li class="nav-item">
             <a class="nav-link">Deposits Account Summary</a>

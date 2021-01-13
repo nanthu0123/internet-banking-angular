@@ -9,6 +9,7 @@ export class SidebarComponent implements OnInit {
   public uiBasicCollapsed = false;
   public samplePagesCollapsed = false;
   public accountCollapsed = false;
+  public FundCollapsed = false;
   public depositsCollapsed = false;
   public loanCollapsed = false;
   public depitCreditCardCollapsed = false;
