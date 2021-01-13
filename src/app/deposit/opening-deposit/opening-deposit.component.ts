@@ -9,7 +9,7 @@ export class OpeningDepositComponent implements OnInit {
 
   rdfield:boolean=true;
   reviewrdfield:boolean=false;
-
+  fdfield:boolean=false;
 
   constructor() { }
 
@@ -19,10 +19,16 @@ export class OpeningDepositComponent implements OnInit {
   rddetails(){
     this.rdfield=false;
     this.reviewrdfield=true;
+    this.fdfield=false;
   }
 
   reviewfield(){
 
+  }
+
+  rdfd(){
+    this.rdfield=false;
+    this.fdfield=true;    
   }
 
 }
