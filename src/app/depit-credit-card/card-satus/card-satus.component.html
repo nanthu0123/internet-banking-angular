@@ -1,30 +1,173 @@
-<mat-radio-group aria-label="Select an option">
-    <mat-radio-button value="1">Option 1</mat-radio-button>
-    <mat-radio-button value="2">Option 2</mat-radio-button>
-</mat-radio-group>
+<mat-horizontal-stepper>
+    <mat-step label="Applied" [editable]="false">
+        <h3>Card Application Status</h3>
+        <hr>
+        <form>
+            <div class="form-group">
+                <div class="row  justify-content-center mb-2">
+                    <div class="col-sm-3">
+                        <label>Referance ID</label>
+                    </div>
+                    <div class="col-sm-3">
+                        <label>A122966Qwe099813</label>
+                    </div>
+                </div>
+                <div class="row  justify-content-center mb-2">
+                    <div class="col-sm-3">
+                        <label>Status</label>
+                    </div>
+                    <div class="col-sm-3">
+                        <label>Applied by user</label>
+                    </div>
+                </div>
+                <div class="row  justify-content-center mb-2">
+                    <div class="col-sm-3">
+                        <label>Applied Date and Time</label>
+                    </div>
+                    <div class="col-sm-3">
+                        <label>12/01/2021 at 12:30PM</label>
+                    </div>
+                </div>
+                <div class="row  justify-content-center mb-2">
+                    <div class="col-sm-3">
+                        <label>Remarks</label>
+                    </div>
+                    <div class="col-sm-3">
+                        <label>-No Remarks-</label>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <button type="submit" class="btn btn-primary mr-2 float-right">Print</button>
+        </form>
+    </mat-step>
 
+    <mat-step label="Received" [editable]="false">
+        <h3>Card Application Status</h3>
+        <hr>
+        <form>
+            <div class="form-group">
+                <div class="row  justify-content-center mb-2">
+                    <div class="col-sm-3">
+                        <label>Referance ID</label>
+                    </div>
+                    <div class="col-sm-3">
+                        <label>A122966Qwe099813</label>
+                    </div>
+                </div>
+                <div class="row  justify-content-center mb-2">
+                    <div class="col-sm-3">
+                        <label>Status</label>
+                    </div>
+                    <div class="col-sm-3">
+                        <label>Received to Head Office</label>
+                    </div>
+                </div>
+                <div class="row  justify-content-center mb-2">
+                    <div class="col-sm-3">
+                        <label>Received Date and Time</label>
+                    </div>
+                    <div class="col-sm-3">
+                        <label>13/01/2021 at 12:30PM</label>
+                    </div>
+                </div>
+                <div class="row  justify-content-center mb-2">
+                    <div class="col-sm-3">
+                        <label>Remarks</label>
+                    </div>
+                    <div class="col-sm-3">
+                        <label>-No Remarks-</label>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <button type="submit" class="btn btn-primary mr-2 float-right">Print</button>
+        </form>
+    </mat-step>
 
-<mat-accordion>
-    <mat-expansion-panel hideToggle>
-        <mat-expansion-panel-header>
-            <mat-panel-title>
-                This is the expansion title
-            </mat-panel-title>
-            <mat-panel-description>
-                This is a summary of the content
-            </mat-panel-description>
-        </mat-expansion-panel-header>
-        <p>This is the primary content of the panel.</p>
-    </mat-expansion-panel>
-    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
-        <mat-expansion-panel-header>
-            <mat-panel-title>
-                Self aware panel
-            </mat-panel-title>
-            <mat-panel-description>
-                Currently I am {{panelOpenState ? 'open' : 'closed'}}
-            </mat-panel-description>
-        </mat-expansion-panel-header>
-        <p>I'm visible because I am open</p>
-    </mat-expansion-panel>
-</mat-accordion>
+    <mat-step label="Approved" [editable]="false">
+        <h3>Card Application Status</h3>
+        <hr>
+        <form>
+            <div class="form-group">
+                <div class="row  justify-content-center mb-2">
+                    <div class="col-sm-3">
+                        <label>Referance ID</label>
+                    </div>
+                    <div class="col-sm-3">
+                        <label>A122966Qwe099813</label>
+                    </div>
+                </div>
+                <div class="row  justify-content-center mb-2">
+                    <div class="col-sm-3">
+                        <label>Status</label>
+                    </div>
+                    <div class="col-sm-3">
+                        <label>Approved by Head Manager</label>
+                    </div>
+                </div>
+                <div class="row  justify-content-center mb-2">
+                    <div class="col-sm-3">
+                        <label>Approved Date and Time</label>
+                    </div>
+                    <div class="col-sm-3">
+                        <label>14/01/2021 at 12:30PM</label>
+                    </div>
+                </div>
+                <div class="row  justify-content-center mb-2">
+                    <div class="col-sm-3">
+                        <label>Remarks</label>
+                    </div>
+                    <div class="col-sm-3">
+                        <label>-No Remarks-</label>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <button type="submit" class="btn btn-primary mr-2 float-right">Print</button>
+        </form>
+    </mat-step>
+
+    <mat-step label="Delivered" [editable]="false">
+        <h3>Card Application Status</h3>
+        <hr>
+        <form>
+            <div class="form-group">
+                <div class="row  justify-content-center mb-2">
+                    <div class="col-sm-3">
+                        <label>Referance ID</label>
+                    </div>
+                    <div class="col-sm-3">
+                        <label>A122966Qwe099813</label>
+                    </div>
+                </div>
+                <div class="row  justify-content-center mb-2">
+                    <div class="col-sm-3">
+                        <label>Status</label>
+                    </div>
+                    <div class="col-sm-3">
+                        <label>Delivered to Applicant</label>
+                    </div>
+                </div>
+                <div class="row  justify-content-center mb-2">
+                    <div class="col-sm-3">
+                        <label>Delivered Date and Time</label>
+                    </div>
+                    <div class="col-sm-3">
+                        <label>18/01/2021 at 12:30PM</label>
+                    </div>
+                </div>
+                <div class="row  justify-content-center mb-2">
+                    <div class="col-sm-3">
+                        <label>Remarks</label>
+                    </div>
+                    <div class="col-sm-3">
+                        <label>-No Remarks-</label>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <button type="submit" class="btn btn-primary mr-2 float-right">Print</button>
+        </form>
+    </mat-step>
+</mat-horizontal-stepper>

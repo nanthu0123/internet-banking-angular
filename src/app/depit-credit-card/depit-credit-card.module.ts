@@ -2,11 +2,11 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { MatRadioModule } from '@angular/material/radio';
-import { MatExpansionModule } from '@angular/material/expansion';
+import { MatStepperModule } from '@angular/material/stepper';
 import { ApplyNewCardComponent } from './apply-new-card/apply-new-card.component';
 import { LostCardComplaintComponent } from './lost-card-complaint/lost-card-complaint.component';
 import { CardSatusComponent } from './card-satus/card-satus.component';
+import { StepperSelectionEvent } from '@angular/cdk/stepper';
 
 
 
@@ -22,8 +22,7 @@ const routes: Routes = [
   imports: [
     CommonModule,
     NgbModule,
-    MatRadioModule,
-    MatExpansionModule,
+    MatStepperModule,
     RouterModule.forChild(routes),
   ]
 })
