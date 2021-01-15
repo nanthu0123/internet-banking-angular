@@ -1,14 +1,12 @@
+/* Create three equal columns that floats next to each other */
+.column {
+  padding: 10px;
+}
 
-  
-  /* Create three equal columns that floats next to each other */
-  .column {      
-    padding: 10px;    
-  }
-
-  .acc-details{
-    // margin-left: 150px;
-    text-align: right;
-  }
-  
-
-  
+.acc-details {
+  // margin-left: 150px;
+  text-align: right;
+}
+label {
+  color: #525c65;
+}
