@@ -31,28 +31,28 @@
         <i class="mdi mdi-account menu-icon"></i>
       </a>
       <div class="collapse" [ngbCollapse]="!accountCollapsed">
-        <ul class="nav flex-column sub-menu">          
+        <ul class="nav flex-column sub-menu">
           <li class="nav-item"> <a class="nav-link" routerLink="Accounts/Account-overview" routerLinkActive="active"
-            #accountoverview="routerLinkActive">Account Overview</a></li>         
-          <li class="nav-item">            
+              #accountoverview="routerLinkActive">Account Overview</a></li>
+          <li class="nav-item">
             <a class="nav-link" (click)="FundCollapsed = !FundCollapsed" [attr.aria-expanded]="FundCollapsed"
               aria-controls="auth">
               <span class="sub menu-title">Fund Transfer</span>
-              <i class="menu-arrow"></i>        
+              <i class="menu-arrow"></i>
             </a>
             <div class="collapse" [ngbCollapse]="!FundCollapsed">
-              <ul class="nav flex-column sub-menu"> 
-                <li class="nav-item">                  
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item">
                   <a class="nav-link" routerLink="Accounts/Fund-Transfer" routerLinkActive="active"
-            #accountoverview="routerLinkActive">Add Beneficiaries</a>
-                </li>    
-                <li class="nav-item">                  
+                    #accountoverview="routerLinkActive">Add Beneficiaries</a>
+                </li>
+                <li class="nav-item">
                   <a class="nav-link" routerLink="Accounts/Transaction" routerLinkActive="active"
-            #accountoverview="routerLinkActive">Transaction</a>
-                </li>           
+                    #accountoverview="routerLinkActive">Transaction</a>
+                </li>
               </ul>
             </div>
-          </li>    
+          </li>
         </ul>
       </div>
     </li>
@@ -66,9 +66,9 @@
       </a>
       <div class="collapse" [ngbCollapse]="!depositsCollapsed">
         <ul class="nav flex-column sub-menu">
-          <li class="nav-item">            
+          <li class="nav-item">
             <a class="nav-link" routerLink="Deposit/opening-deposit" routerLinkActive="active"
-            #accountoverview="routerLinkActive">Opening Deposits</a>
+              #accountoverview="routerLinkActive">Opening Deposits</a>
           </li>
           <li class="nav-item">
             <a class="nav-link">Deposits Account Summary</a>
@@ -127,13 +127,17 @@
       <div class="collapse" [ngbCollapse]="!depitCreditCardCollapsed">
         <ul class="nav flex-column sub-menu">
           <li class="nav-item">
-            <a class="nav-link">Card Status</a>
+            <a class="nav-link" routerLink="depit-credit-card/card-satus" routerLinkActive="active"
+              #modals="routerLinkActive">Card Status</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link">Apply New Card</a>
+            <a class="nav-link" routerLink="depit-credit-card/apply-new-card" routerLinkActive="active"
+              #modals="routerLinkActive">Apply
+              New Card</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link">Lost Card Complaint</a>
+            <a class="nav-link" routerLink="depit-credit-card/lost-card-complaint" routerLinkActive="active"
+              #modals="routerLinkActive">Lost Card Complaint</a>
           </li>
         </ul>
       </div>
@@ -149,10 +153,12 @@
       <div class="collapse" [ngbCollapse]="!valAdServCollapsed">
         <ul class="nav flex-column sub-menu">
           <li class="nav-item">
-            <a class="nav-link">Bill Payment</a>
+            <a class="nav-link" routerLink="value-added-service/bill-payment" routerLinkActive="active"
+              #modals="routerLinkActive">Bill Payment</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link">Other Facilities</a>
+            <a class="nav-link" routerLink="value-added-service/other-facilities" routerLinkActive="active"
+              #modals="routerLinkActive">Other Facilities</a>
           </li>
         </ul>
       </div>
