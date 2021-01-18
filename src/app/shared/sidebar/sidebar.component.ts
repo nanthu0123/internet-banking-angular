@@ -12,7 +12,7 @@ export class SidebarComponent implements OnInit {
   public FundCollapsed = false;
   public depositsCollapsed = false;
   public loanCollapsed = false;
-  public depitCreditCardCollapsed = false;
+  public debitCreditCardCollapsed = false;
   public valAdServCollapsed = false;
 
 
