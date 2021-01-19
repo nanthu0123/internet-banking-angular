@@ -1,0 +1,180 @@
+<mat-horizontal-stepper linear #stepper>
+    <mat-step [stepControl]="firstFormGroup" [editable]="true">
+        <ng-template matStepLabel>File Dispute</ng-template>
+        <div class="form-group">
+            <h2>Enter Dispute Details</h2>
+            <hr>
+            <div class="row  justify-content-center mb-2">
+                <div class="col-sm-4">
+                    <label>your customer ID</label>
+                </div>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+            <div class="row  justify-content-center mb-2">
+                <div class="col-sm-4">
+                    <label>Date of Dispute</label>
+                </div>
+                <div class="col-sm-4">
+                    <input type="date" class="form-control">
+                </div>
+            </div>
+        </div>
+        <hr>
+        <button matStepperNext class="btn btn-success mr-2 float-right">Next</button>
+    </mat-step>
+
+    <mat-step [stepControl]="secondFormGroup" [editable]="true">
+        <ng-template matStepLabel>Choose Transaction</ng-template>
+        <div class="table-responsive" data-pattern="priority-columns">
+            <h2>Select Dispute Transactions</h2>
+            <hr>
+            <table class="table table-bordered table-hover">
+                <thead style="background-color: rgb(226, 226, 226);">
+                    <tr>
+                        <th data-priority="1">Date & Time</th>
+                        <th data-priority="2">Type</th>
+                        <th data-priority="3">Descritpion</th>
+                        <th data-priority="4">Amount</th>
+                        <th data-priority="5">Balance</th>
+                        <th data-priority="6">Select</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>22/11/2020 at 12:30PM</td>
+                        <td>Bill Payment</td>
+                        <td>Electricty Bill Payment</td>
+                        <td style="color: red;">₹.-780</td>
+                        <td style="color: green;">₹.12000</td>
+                        <td> <input type="checkbox"> </td>
+                    </tr>
+                    <tr>
+                        <td>22/11/2020 at 12:30PM</td>
+                        <td>Credit</td>
+                        <td>Salary</td>
+                        <td style="color: green;">₹.20000</td>
+                        <td style="color: green;">₹.32000</td>
+                        <td> <input type="checkbox"> </td>
+                    </tr>
+                    <tr>
+                        <td>22/11/2020 at 12:30PM</td>
+                        <td>Bill Payment</td>
+                        <td>Electricty Bill Payment</td>
+                        <td style="color: red;">₹.-780</td>
+                        <td style="color: green;">₹.12000</td>
+                        <td> <input type="checkbox"> </td>
+                    </tr>
+                    <tr>
+                        <td>22/11/2020 at 12:30PM</td>
+                        <td>Bill Payment</td>
+                        <td>Electricty Bill Payment</td>
+                        <td style="color: red;">₹.-780</td>
+                        <td style="color: green;">₹.12000</td>
+                        <td> <input type="checkbox"> </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <hr>
+        <button matStepperPrevious class="btn btn-danger mr-2">back</button>
+        <button matStepperNext class="btn btn-success mr-2 float-right">Next</button>
+    </mat-step>
+
+    <mat-step [stepControl]="thirdFormGroup" [editable]="true">
+        <ng-template matStepLabel>Dispute Details</ng-template>
+        <div class="form-group">
+            <h2>Please, fill the following dispute details</h2>
+            <hr>
+            <div class="row mb-4">
+                <div class="col-sm-10">
+                    <label>Why are you disputing those transactions?</label>
+                    <select class="form-control">
+                        <option>charged in an incorrect amount</option>
+                        <option>charged to many times</option>
+                        <option>did not receive money</option>
+                        <option>paid alternate means</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-sm-4">
+                    <label>Enter dispute amount</label>
+                </div>
+                <div class="col-sm-4">
+                    <input type="number" class="form-control">
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-sm-4">
+                    <label>Reason for Dispute</label>
+                </div>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-sm-12">
+                    <label>Anyting else you would like to tell as about this dispute?</label>
+                    <textarea class="form-control" cols="30" rows="10"></textarea>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <button matStepperPrevious class="btn btn-danger mr-2">back</button>
+        <button matStepperNext class="btn btn-success mr-2 float-right">Next</button>
+    </mat-step>
+
+    <mat-step>
+        <ng-template matStepLabel>Confirm</ng-template>
+        <h2>Please Confirm the following details</h2>
+        <hr>
+        <div class="table" data-pattern="priority-columns">
+            <h3>Dispute Transaction Details</h3>
+            <table class="table table-borderless table-hover">
+                <thead style="background-color: rgb(226, 226, 226);">
+                    <tr>
+                        <th data-priority="1">Date & Time</th>
+                        <th data-priority="2">Type</th>
+                        <th data-priority="3">Descritpion</th>
+                        <th data-priority="4">Amount</th>
+                        <th data-priority="5">Balance</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>22/11/2020 at 12:30PM</td>
+                        <td>Bill Payment</td>
+                        <td>Electricty Bill Payment</td>
+                        <td style="color: red;">₹.-780</td>
+                        <td style="color: green;">₹.12000</td>
+                    </tr>
+                    <tr>
+                        <td>22/11/2020 at 12:30PM</td>
+                        <td>Credit</td>
+                        <td>Salary</td>
+                        <td style="color: green;">₹.20000</td>
+                        <td style="color: green;">₹.32000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <hr>
+        <h4>1.Why are you disputing those transactions?</h4>
+        <h4>charged in an incorrect amount</h4>
+        <hr>
+        <h4>2.Enter dispute amount</h4>
+        <h4>Rs.3000</h4>
+        <hr>
+        <h4>3.Reason for Dispute?</h4>
+        <h4>Lorem ipsum dolor sit.</h4>
+        <hr>
+        <h4>4.Anyting else you would like to tell as about this dispute?</h4>
+        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, vitae!</h4>
+        <hr>
+        <button matStepperPrevious class="btn btn-danger mr-2">back</button>
+        <button type="submit" class="btn btn-success mr-2 float-right">Submit</button>
+    </mat-step>
+</mat-horizontal-stepper>
