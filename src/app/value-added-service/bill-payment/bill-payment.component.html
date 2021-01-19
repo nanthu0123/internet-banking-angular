@@ -1,0 +1,235 @@
+<div class="row">
+    <div class="col-md-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Bill Payment</h4>
+                <hr>
+                <br>
+                <ngb-tabset>
+                    <ngb-tab title="Add Biller">
+                        <ng-template ngbTabContent>
+                            <div id="selectBiller" *ngIf="selectBiller">
+                                <h4 class="card-title">Select Biller</h4>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-2">
+                                        <label class="mb-0">Category</label>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <select class="form-control">
+                                            <option>Life Insurance</option>
+                                            <option>Credit Card</option>
+                                            <option>Donations</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-2">
+                                        <label class="mb-0">Biller Name</label>
+                                    </div>
+                                    <div class="col-sm-9 ">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-2">
+                                        <label class="mb-0">Biller Location</label>
+                                    </div>
+                                    <div class="col-sm-9 ">
+                                        <select class="form-control">
+                                            <option>Chennai</option>
+                                            <option>Coimbatore</option>
+                                            <option>Salem</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <button class="btn btn-success"
+                                            (click)="selectBiller=false;billerDetails=true">Next</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="billerDetails" *ngIf="billerDetails">
+                                <h4 class="card-title">Biller Detils</h4>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <label class="mb-0">Biller Name</label>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" disabled>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <label class="mb-0">Biller Type</label>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" disabled>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <label class="mb-0">Biller Short Name<br>(for your referance)</label>
+                                    </div>
+                                    <div class="col-sm-6 ">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <label class="mb-0">Payment Type</label>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <select class="form-control">
+                                            <option>Auto</option>
+                                            <option>Manual</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <label class="mb-0">Unique Registration Number</label>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="number" class="form-control">
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <label class="mb-0">Bank Account Number</label>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="number" class="form-control">
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <label class="mb-0">Entire Bill Amount</label>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <select class="form-control">
+                                            <option>Yes</option>
+                                            <option>No</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <label class="mb-0">Amount Pay Limit</label>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="number" class="form-control" placeholder="₹.">
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <button class="btn btn-danger"
+                                            (click)="selectBiller=true;billerDetails=false">Back</button>
+                                        <button class="btn btn-success ml-4">Add</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </ng-template>
+                    </ngb-tab>
+
+                    <ngb-tab title="View & Pay Bills">
+                        <ng-template ngbTabContent>
+                            <h4 class="card-title">Bill Details</h4>
+                            <hr>
+                            <div class="table-responsive" data-pattern="priority-columns">
+                                <table
+                                    summary="This table shows how to create responsive tables using RWD-Table-Patterns' functionality"
+                                    class="table table-bordered table-hover">
+                                    <caption class="text-center">Bill Details</caption>
+
+                                    <thead style="background-color: rgb(173, 173, 173);">
+                                        <tr>
+                                            <th data-priority="1">Biller Name</th>
+                                            <th data-priority="2">Amount</th>
+                                            <th data-priority="3">Bill Date</th>
+                                            <th data-priority="4">Due Date</th>
+                                            <th data-priority="5">Action</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Indian Gas Agency</td>
+                                            <td style="color: green;">₹.780</td>
+                                            <td>22/11/2020</td>
+                                            <td>22/12/2020</td>
+                                            <td>
+                                                <div class="btn btn-success btn-sm">Pay</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Indian Gas Agency</td>
+                                            <td style="color: green;">₹.780</td>
+                                            <td>22/11/2020</td>
+                                            <td>22/12/2020</td>
+                                            <td>
+                                                <div class="btn btn-success btn-sm">Pay</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Indian Gas Agency</td>
+                                            <td style="color: green;">₹.780</td>
+                                            <td>22/11/2020</td>
+                                            <td>22/12/2020</td>
+                                            <td>
+                                                <div class="btn btn-success btn-sm">Pay</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Indian Gas Agency</td>
+                                            <td style="color: green;">₹.780</td>
+                                            <td>22/11/2020</td>
+                                            <td>22/12/2020</td>
+                                            <td>
+                                                <div class="btn btn-success btn-sm">Pay</div>
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                    <tfoot>
+
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </ng-template>
+                    </ngb-tab>
+                    <ngb-tab title="Bill Pay History">
+                        <ng-template ngbTabContent>
+                            <div>
+                                <b>Select Dates to View Bill Payments History</b>
+                                <hr>
+                                <form class="form-inline">
+                                    <label class="required mx-4">From Date</label>
+                                    <input nbInput placeholder="Opening Date" type="date" class="form-control" name="">
+                                    <label class="required mx-4">To Date</label>
+                                    <input nbInput placeholder="Opening Date" type="date" class="form-control"
+                                        name="chargeddate">
+                                    <button type="submit" class="btn btn-info btn-fw ml-4">Submit</button>
+                                </form>
+                            </div>
+                        </ng-template>
+                    </ngb-tab>
+                </ngb-tabset>
+            </div>
+        </div>
+    </div>
+</div>

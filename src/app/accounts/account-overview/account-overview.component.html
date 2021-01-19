@@ -1,278 +1,281 @@
-  <div class="row">
-    <div class="col-md-12 grid-margin stretch-card">
-      <div class="card">
-        <div class="card-body">
-          <h4 class="card-title">Account Overview</h4>
-          <div class="fx-row">
-            <div class="column float-left">
-                <i class="mdi mdi-bank" style="font-size:83px;"></i>
-            </div>
-            <div class="column float-left">
-              <h2 style="margin-bottom: 0px;">Account Name</h2>
-              <p style="margin-bottom: 5px;">Account Type</p>
-              <p style="margin-bottom: 0px;">SDFRGH468732648732</p>
-            </div>     
-            <div class="column ">
-                <p style="margin-bottom: 0px;text-align: right;">Account Balance</p>
-                <p style="margin-bottom: 0px;text-align: right;">Rs: 200000</p>
-                <button type="button" class="btn btn-info btn-fw" style="float: right;">Transfer Fund</button>
-              </div>                             
+<div class="row">
+  <div class="col-md-12 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Account Overview</h4>
+        <div class="fx-row">
+          <div class="column float-left mt-4">
+            <i class="mdi mdi-bank" style="font-size:83px;"></i>
           </div>
-          <br> 
-          <br>       
-          <br>                               
-            <ngb-tabset>
-                <ngb-tab title="Account Overview">
-                  <ng-template ngbTabContent>
-                    
-                    <div class="row">
-                      <div class="col-sm-3">
-                        <h6 class="mb-0">Account Name</h6>
-                      </div>
-                      <div class="col-sm-9 ">
-                        <label>Kenneth Valdez</label>
-                      </div>
-                    </div>
-                    <hr>
-                    <div class="row">
-                      <div class="col-sm-3">
-                        <h6 class="mb-0">Account Number</h6>
-                      </div>
-                      <div class="col-sm-9 ">
-                        <label>SDFGH2345678987654</label>
-                      </div>
-                    </div>
-                    <hr>
-                    <div class="row">
-                      <div class="col-sm-3">
-                        <h6 class="mb-0">MMID</h6>
-                      </div>
-                      <div class="col-sm-9 ">
-                        <label>(239) 816-9029</label>
-                      </div>
-                    </div>
-                    <hr>
-                    <div class="row">
-                      <div class="col-sm-3">
-                        <h6 class="mb-0">Bank Name</h6>
-                      </div>
-                      <div class="col-sm-9 ">
-                        <label>(320) 380-4539</label>
-                      </div>
-                    </div>
-                    <hr>
-                    <div class="row">
-                      <div class="col-sm-3">
-                        <h6 class="mb-0">IFSC Code</h6>
-                      </div>
-                      <div class="col-sm-9 ">
-                        <label>SDFGJHGF86587</label>
-                      </div>
-                    </div>                                            
-                    <hr>
-                    <div class="row">
-                      <div class="col-sm-3">
-                        <h6 class="mb-0">VPA</h6>
-                      </div>
-                      <div class="col-sm-9">
-                        <label>SDFGJHGF86587</label>
-                      </div>
-                    </div>  
-                  </ng-template>
-                </ngb-tab>
-                <ngb-tab title="Quick transactions">
-                  <ng-template ngbTabContent>    
-                    <div id="transac-field" *ngIf="transacfield">
-                    <div class="row">
-                      <div class="col-sm-2">
-                        <h6 class="mb-0">Account No</h6>
-                      </div>
-                      <div class="col-sm-9">
-                        <input type="text" class="form-control" autofocus>
-                      </div>
-                    </div>
-                    <hr>
-                    <div class="row">
-                      <div class="col-sm-2">
-                        <h6 class="mb-0">Account Type</h6>
-                      </div>
-                      <div class="col-sm-9 ">
-                        <input type="text" class="form-control" >
-                      </div>
-                    </div>
-                    <hr>
-                    <div class="row">
-                      <div class="col-sm-2">
-                        <h6 class="mb-0">Amount</h6>
-                      </div>
-                      <div class="col-sm-9 ">
-                        <input type="text" class="form-control" >
-                      </div>
-                    </div>
-                    <hr>
-                    <div class="row">
-                      <div class="col-sm-2">
-                        <h6 class="mb-0">Customer Name</h6>
-                      </div>
-                      <div class="col-sm-9 ">
-                        <input type="text" class="form-control">
-                      </div>
-                    </div>
-                    <hr>
-                    <div class="row">
-                      <div class="col-sm-2">
-                        <h6 class="mb-0">Branch</h6>
-                      </div>
-                      <div class="col-sm-9 ">
-                        <input type="text" class="form-control" >
-                      </div>
-                    </div>
-                    <hr>
-                    <div class="row">
-                      <div class="col-sm-2">
-                        <h6 class="mb-0">IFSC Code</h6>
-                      </div>
-                      <div class="col-sm-9 ">
-                        <input type="text" class="form-control" >
-                      </div>
-                    </div> 
-                    <br>
-                    <div class="row">
-                      <div class="col-sm-12">
-                        <button type="button" class="btn btn-info btn-fw float-right" (click)="Quicktran()">Transfer</button>                                                                                  
-                      </div>                      
-                    </div> 
-                  </div>              
-                    <br>
-                    <div  id="one-time-pwd" *ngIf="onetimepwd">
-                      <div class="row">
-                        <div class="col-sm-2">
-                          <h6 class="mb-0">Enter The OTP</h6>
-                        </div>
-                        <div class="col-sm-4">
-                          <input type="text" class="form-control" autofocus>
-                        </div>
-                      </div>
-                     <br>
-                      <div class="row">
-                        <div class="col-sm-6">
-                          <button type="button" class="btn btn-info btn-fw float-right" (click)="otp(smallModalContent)">Submit</button>                                                                                  
-                        </div>                      
-                      </div>                                                                                                
-                    </div> 
-
-                    <ng-template #smallModalContent let-modal class="modal fade" aria-labelledby="exampleModalLabel-3">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h5 class="modal-title" id="exampleModalLabel-3">Transaction Status</h5>
-                          <button type="button" class="close" (click)="modal.dismiss()" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                          </button>
-                        </div>
-                        <div class="modal-body">
-                          <p>Modal body text goes here.</p>
-                        </div>
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-success" (click)="modal.close()">Submit</button>
-                          <button type="button" class="btn btn-light" (click)="modal.close()">Cancel</button>
-                        </div>
-                      </div>
-                    </ng-template> 
-
-                    <br>                                     
-                  </ng-template>
-                </ngb-tab>
-                <ngb-tab title="Transactions">
-                  <ng-template ngbTabContent>
-                    <div class="table-responsive" data-pattern="priority-columns">
-                      <table summary="This table shows how to create responsive tables using RWD-Table-Patterns' functionality" class="table table-bordered table-hover">
-                        <caption class="text-center"> Transaction Details</caption>
-                        <thead>
-                          <tr>                        
-                            <th data-priority="1">Transaction ID</th>
-                            <th data-priority="2">Transaction Type</th>                          
-                            <th data-priority="3">Account No</th>    
-                            <th data-priority="4">Amount</th>                        
-                            <th data-priority="5">Transaction Date</th>
-                            <th data-priority="6">Status</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>2780387</td>
-                            <td>Third party transaction</td>
-                            <td>098765432</td>
-                            <td style="color: red;">-315677.3</td>     
-                            <td>22/11/2020</td>
-                            <td>Success</td>
-                          </tr>
-                          <tr>
-                            <td>2780387</td>
-                            <td>Third party transaction</td>
-                            <td>098765432</td>
-                            <td style="color: red;">-315677.3</td>     
-                            <td>22/11/2020</td>
-                            <td>Success</td>
-                          </tr>
-                          <tr>
-                            <td>2780387</td>
-                            <td>Third party transaction</td>
-                            <td>098765432</td>
-                            <td style="color:green;">+315677.3</td>     
-                            <td>22/11/2020</td>
-                            <td>Success</td>
-                          </tr>
-                          <tr>
-                            <td>2780387</td>
-                            <td>Third party transaction</td>
-                            <td>098765432</td>
-                            <td style="color: red;">-315677.3</td>     
-                            <td>22/11/2020</td>
-                            <td>Success</td>
-                          </tr>
-                          <tr>
-                            <td>2780387</td>
-                            <td>Third party transaction</td>
-                            <td>098765432</td>
-                            <td style="color: red;">-315677.3</td>     
-                            <td>22/11/2020</td>
-                            <td>Success</td>
-                          </tr>
-                          <tr>
-                            <td>2780387</td>
-                            <td>Third party transaction</td>
-                            <td>098765432</td>
-                            <td style="color: green;">+315677.3</td>     
-                            <td>22/11/2020</td>
-                            <td>Success</td>
-                          </tr>
-                          
-                        </tbody>
-                        <tfoot>
-                          
-                        </tfoot>
-                      </table>
-                    </div>
-                  </ng-template>
-                </ngb-tab>
-                <ngb-tab title="Statement generation">
-                    <ng-template ngbTabContent>
-                      <div>
-                        <b>Daily User Account Statment</b>   
-                        <br>            
-                        <form class="form-inline">                     
-                          <label class="required">From Date</label>  
-                          <input nbInput placeholder="Opening Date" type="date"  class="form-control" name="">
-                          <label class="required">To Date</label>  
-                          <input nbInput placeholder="Opening Date" type="date"  class="form-control" name="chargeddate">            
-                          <button type="submit" class="btn btn-info btn-fw">Submit</button>                                                             
-                        </form>          
-                      </div>
-                    </ng-template>
-                  </ngb-tab>
-              </ngb-tabset>           
+          <div class="column float-left">
+            <h2 style="margin-bottom: 0px;">Account Name</h2>
+            <p style="margin-bottom: 5px;">Account Type</p>
+            <p style="margin-bottom: 0px;">SDFRGH468732648732</p>
+          </div>
+          <div class="column ">
+            <p style="margin-bottom: 0px;text-align: right;">Account Balance</p>
+            <p style="margin-bottom: 0px;text-align: right;">Rs: 200000</p>
+            <button type="button" class="btn btn-info btn-fw" style="float: right;">Transfer Fund</button>
+          </div>
         </div>
+        <br>
+        <br>
+        <br>
+        <ngb-tabset>
+          <ngb-tab title="Account Overview">
+            <ng-template ngbTabContent>
+
+              <div class="row">
+                <div class="col-sm-3">
+                  <label class="mb-0">Account Name</label>
+                </div>
+                <div class="col-sm-9 ">
+                  <label>Kenneth Valdez</label>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-3">
+                  <label class="mb-0">Account Number</label>
+                </div>
+                <div class="col-sm-9 ">
+                  <label>SDFGH2345678987654</label>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-3">
+                  <label class="mb-0">MMID</label>
+                </div>
+                <div class="col-sm-9 ">
+                  <label>(239) 816-9029</label>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-3">
+                  <label class="mb-0">Bank Name</label>
+                </div>
+                <div class="col-sm-9 ">
+                  <label>(320) 380-4539</label>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-3">
+                  <label class="mb-0">IFSC Code</label>
+                </div>
+                <div class="col-sm-9 ">
+                  <label>SDFGJHGF86587</label>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-3">
+                  <label class="mb-0">VPA</label>
+                </div>
+                <div class="col-sm-9">
+                  <label>SDFGJHGF86587</label>
+                </div>
+              </div>
+            </ng-template>
+          </ngb-tab>
+          <ngb-tab title="Quick transactions">
+            <ng-template ngbTabContent>
+              <div id="transac-field" *ngIf="transacfield">
+                <div class="row">
+                  <div class="col-sm-2">
+                    <label class="mb-0">Account No</label>
+                  </div>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" autofocus>
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-sm-2">
+                    <label class="mb-0">Account Type</label>
+                  </div>
+                  <div class="col-sm-9 ">
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-sm-2">
+                    <label class="mb-0">Amount</label>
+                  </div>
+                  <div class="col-sm-9 ">
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-sm-2">
+                    <label class="mb-0">Customer Name</label>
+                  </div>
+                  <div class="col-sm-9 ">
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-sm-2">
+                    <label class="mb-0">Branch</label>
+                  </div>
+                  <div class="col-sm-9 ">
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-sm-2">
+                    <label class="mb-0">IFSC Code</label>
+                  </div>
+                  <div class="col-sm-9 ">
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+                <br>
+                <div class="row">
+                  <div class="col-sm-12">
+                    <button type="button" class="btn btn-info btn-fw float-right"
+                      (click)="Quicktran()">Transfer</button>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div id="one-time-pwd" *ngIf="onetimepwd">
+                <div class="row">
+                  <div class="col-sm-2">
+                    <label class="mb-0">Enter The OTP</label>
+                  </div>
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control" autofocus>
+                  </div>
+                </div>
+                <br>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <button type="button" class="btn btn-info btn-fw float-right"
+                      (click)="otp(smallModalContent)">Submit</button>
+                  </div>
+                </div>
+              </div>
+
+              <ng-template #smallModalContent let-modal class="modal fade" aria-labelledby="exampleModalLabel-3">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel-3">Transaction Status</h5>
+                    <button type="button" class="close" (click)="modal.dismiss()" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <p>Modal body text goes here.</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-success" (click)="modal.close()">Submit</button>
+                    <button type="button" class="btn btn-light" (click)="modal.close()">Cancel</button>
+                  </div>
+                </div>
+              </ng-template>
+
+              <br>
+            </ng-template>
+          </ngb-tab>
+          <ngb-tab title="Transactions">
+            <ng-template ngbTabContent>
+              <div class="table-responsive" data-pattern="priority-columns">
+                <table
+                  summary="This table shows how to create responsive tables using RWD-Table-Patterns' functionality"
+                  class="table table-bordered table-hover">
+                  <caption class="text-center"> Transaction Details</caption>
+                  <thead>
+                    <tr>
+                      <th data-priority="1">Transaction ID</th>
+                      <th data-priority="2">Transaction Type</th>
+                      <th data-priority="3">Account No</th>
+                      <th data-priority="4">Amount</th>
+                      <th data-priority="5">Transaction Date</th>
+                      <th data-priority="6">Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>2780387</td>
+                      <td>Third party transaction</td>
+                      <td>098765432</td>
+                      <td style="color: red;">-315677.3</td>
+                      <td>22/11/2020</td>
+                      <td>Success</td>
+                    </tr>
+                    <tr>
+                      <td>2780387</td>
+                      <td>Third party transaction</td>
+                      <td>098765432</td>
+                      <td style="color: red;">-315677.3</td>
+                      <td>22/11/2020</td>
+                      <td>Success</td>
+                    </tr>
+                    <tr>
+                      <td>2780387</td>
+                      <td>Third party transaction</td>
+                      <td>098765432</td>
+                      <td style="color:green;">+315677.3</td>
+                      <td>22/11/2020</td>
+                      <td>Success</td>
+                    </tr>
+                    <tr>
+                      <td>2780387</td>
+                      <td>Third party transaction</td>
+                      <td>098765432</td>
+                      <td style="color: red;">-315677.3</td>
+                      <td>22/11/2020</td>
+                      <td>Success</td>
+                    </tr>
+                    <tr>
+                      <td>2780387</td>
+                      <td>Third party transaction</td>
+                      <td>098765432</td>
+                      <td style="color: red;">-315677.3</td>
+                      <td>22/11/2020</td>
+                      <td>Success</td>
+                    </tr>
+                    <tr>
+                      <td>2780387</td>
+                      <td>Third party transaction</td>
+                      <td>098765432</td>
+                      <td style="color: green;">+315677.3</td>
+                      <td>22/11/2020</td>
+                      <td>Success</td>
+                    </tr>
+
+                  </tbody>
+                  <tfoot>
+
+                  </tfoot>
+                </table>
+              </div>
+            </ng-template>
+          </ngb-tab>
+          <ngb-tab title="Statement generation">
+            <ng-template ngbTabContent>
+              <div>
+                <b>Daily User Account Statment</b>
+                <br>
+                <form class="form-inline">
+                  <label class="required">From Date</label>
+                  <input nbInput placeholder="Opening Date" type="date" class="form-control" name="">
+                  <label class="required">To Date</label>
+                  <input nbInput placeholder="Opening Date" type="date" class="form-control" name="chargeddate">
+                  <button type="submit" class="btn btn-info btn-fw">Submit</button>
+                </form>
+              </div>
+            </ng-template>
+          </ngb-tab>
+        </ngb-tabset>
       </div>
     </div>
   </div>
-  
+</div>
