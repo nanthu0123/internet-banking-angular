@@ -72,7 +72,7 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" routerLink="Deposit/Deposit-summary" routerLinkActive="active"
-            #accountoverview="routerLinkActive">Deposits Account Summary</a>
+              #accountoverview="routerLinkActive">Deposits Account Summary</a>
           </li>
           <li class="nav-item">
             <a class="nav-link">Nominee</a>
@@ -120,24 +120,24 @@
 
     <!-- Debit Credit Cards -->
     <li class="nav-item">
-      <a class="nav-link" (click)="depitCreditCardCollapsed = !depitCreditCardCollapsed"
-        [attr.aria-expanded]="depitCreditCardCollapsed" aria-controls="auth">
-        <span class="menu-title">Depit Cards/Credit Cards</span>
+      <a class="nav-link" (click)="debitCreditCardCollapsed = !debitCreditCardCollapsed"
+        [attr.aria-expanded]="debitCreditCardCollapsed" aria-controls="auth">
+        <span class="menu-title">Debit Cards/Credit Cards</span>
         <i class="menu-arrow"></i>
       </a>
-      <div class="collapse" [ngbCollapse]="!depitCreditCardCollapsed">
+      <div class="collapse" [ngbCollapse]="!debitCreditCardCollapsed">
         <ul class="nav flex-column sub-menu">
           <li class="nav-item">
-            <a class="nav-link" routerLink="depit-credit-card/card-satus" routerLinkActive="active"
+            <a class="nav-link" routerLink="debit-credit-card/card-satus" routerLinkActive="active"
               #modals="routerLinkActive">Card Status</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="depit-credit-card/apply-new-card" routerLinkActive="active"
+            <a class="nav-link" routerLink="debit-credit-card/apply-new-card" routerLinkActive="active"
               #modals="routerLinkActive">Apply
               New Card</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="depit-credit-card/lost-card-complaint" routerLinkActive="active"
+            <a class="nav-link" routerLink="debit-credit-card/lost-card-complaint" routerLinkActive="active"
               #modals="routerLinkActive">Lost Card Complaint</a>
           </li>
         </ul>
@@ -154,7 +154,7 @@
       <div class="collapse" [ngbCollapse]="!valAdServCollapsed">
         <ul class="nav flex-column sub-menu">
           <li class="nav-item">
-            <a class="nav-link" routerLink="value-added-service/bill-payment" routerLinkActive="active"
+            <a class="nav-link" routerLink="./value-added-service/bill-payment" routerLinkActive="active"
               #modals="routerLinkActive">Bill Payment</a>
           </li>
           <li class="nav-item">
@@ -163,6 +163,13 @@
           </li>
         </ul>
       </div>
+    </li>
+
+    <!-- help and support -->
+    <li class="nav-item">
+      <a class="nav-link" routerLink="help-and-support">
+        <span class="menu-title">Help & Support</span>
+      </a>
     </li>
 
     <li class="nav-item"
