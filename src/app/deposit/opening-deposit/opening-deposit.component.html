@@ -40,19 +40,28 @@
                 <option>XXXXXXXXXXXXX8789</option>
               </select>
             </div>
-          </div>
+          </div> 
           <br>
-          <div class="row">
-            <div class="col-sm-2">
-              <h6 class="mb-0">Select deposit Type</h6>
+          <br> 
+          <div class="row">                    
+            <div class="col-sm-3">
+              <label class="mb-0">For how long would you like to save</label>
             </div>
-            <div class="col-sm-5">
-              <select class="form-control" (change)="rdfd()">
-                <option>Recurring deposit</option>
-                <option>Fixed deposit</option>
-              </select>
+            <div class="col-sm-4">
+                <select  class="form-control" >
+                    <option>select year</option>
+                    <option>1 year</option>
+                    <option>2 year</option>                 
+                </select>
             </div>
-          </div>
+            <div class="col-sm-4">
+                <select  class="form-control" >
+                    <option>select month</option>
+                    <option>0 month</option>
+                    <option>1 month</option>                 
+                </select>
+            </div>
+          </div>      
           <br>
           <br>
           <div class="row">
@@ -70,147 +79,7 @@
             </div>
           </div>
         </div>
-        <div id="rd-receipt" *ngIf="reviewrdfield">
-          <h4 class="card-title">Review Your Recurring deposit details</h4>
-          <br>
-          <div *ngIf="rdfield">
-            <h4 class="card-title">Create Recurring deposit</h4>
-<<<<<<< HEAD
-            <br>            
-            <div class="row">                    
-                <div class="col-sm-3">
-                  <h6 class="mb-0">How much would you like contribute monthly</h6>
-                </div>
-                <div class="col-sm-4">
-                    <input type="text" class="form-control" autofocus>
-                </div>
-              </div>
-              <br>
-              <br> 
-              <div class="row">                    
-                <div class="col-sm-3">
-                  <h6 class="mb-0">From which account would you like to continue</h6>
-                </div>
-                <div class="col-sm-4">
-                    <select  class="form-control" >
-                        <option>XXXXXXXXXXXXX9879</option>
-                        <option>XXXXXXXXXXXXX8789</option>                 
-                    </select>
-                </div>
-              </div>
-              <br>
-              <br> 
-              <div class="row">                    
-                <div class="col-sm-3">
-                  <h6 class="mb-0">For how long would you like to save</h6>
-                </div>
-                <div class="col-sm-4">
-                    <select  class="form-control" >
-                        <option>select year</option>
-                        <option>1 year</option>
-                        <option>2 year</option>                 
-                    </select>
-                </div>
-                <div class="col-sm-4">
-                    <select  class="form-control" >
-                        <option>select month</option>
-                        <option>0 month</option>
-                        <option>1 month</option>                 
-                    </select>
-                </div>
-              </div> 
-              <br>
-              <br>
-              <div class="row">                    
-                <div class="col-sm-3">
-                  <h6 class="mb-0">Schedule a monthly transfer</h6>
-                </div>
-                <div class="col-sm-4">
-                    <input nbInput placeholder="Opening Date" type="date"  class="form-control" name="">
-                </div>
-              </div> 
-              <br>
-              <br>
-              <div class="row">                    
-                <div class="col-sm-3">
-                  <h6 class="mb-0">Nominee</h6>
-                </div>
-                <div class="col-sm-4">
-                  <select  class="form-control" >
-                    <option>select nominee</option>
-                    <option>user1</option>
-                    <option>user2</option>                 
-                </select>
-                </div>
-              </div> 
-              <br>
-              <div class="row">
-                <div class="col-sm-12">
-                  <button type="button" class="btn btn-info btn-fw float-right" (click)="rddetails()">Submit</button>                                                                                  
-                </div>                      
-              </div>  
-=======
-            <br>
-            <div class="row">
-              <div class="col-sm-3">
-                <h6 class="mb-0">How much would you like contribute monthly</h6>
-              </div>
-              <div class="col-sm-4">
-                <input type="text" class="form-control" autofocus>
-              </div>
-            </div>
-            <br>
-            <br>
-            <div class="row">
-              <div class="col-sm-3">
-                <h6 class="mb-0">From which account would you like to continue</h6>
-              </div>
-              <div class="col-sm-4">
-                <select class="form-control">
-                  <option>XXXXXXXXXXXXX9879</option>
-                  <option>XXXXXXXXXXXXX8789</option>
-                </select>
-              </div>
-            </div>
-            <br>
-            <br>
-            <div class="row">
-              <div class="col-sm-3">
-                <h6 class="mb-0">For how long would you like to save</h6>
-              </div>
-              <div class="col-sm-4">
-                <select class="form-control">
-                  <option>select year</option>
-                  <option>1 year</option>
-                  <option>2 year</option>
-                </select>
-              </div>
-              <div class="col-sm-4">
-                <select class="form-control">
-                  <option>select month</option>
-                  <option>0 month</option>
-                  <option>1 month</option>
-                </select>
-              </div>
-            </div>
-            <br>
-            <br>
-            <div class="row">
-              <div class="col-sm-3">
-                <h6 class="mb-0">Schedule a monthly transfer</h6>
-              </div>
-              <div class="col-sm-4">
-                <input nbInput placeholder="Opening Date" type="date" class="form-control" name="">
-              </div>
-            </div>
-            <br>
-            <div class="row">
-              <div class="col-sm-12">
-                <button type="button" class="btn btn-info btn-fw float-right" (click)="rddetails()">Submit</button>
-              </div>
-            </div>
->>>>>>> 5b8eb1573dd09cf7d65898a06fad00afb98ee1ea
-          </div>
+        <div id="rd-receipt">         
           <div id="rd-receipt" *ngIf="reviewrdfield">
             <h4 class="card-title">Review Your Recurring deposit details</h4>
             <br>
