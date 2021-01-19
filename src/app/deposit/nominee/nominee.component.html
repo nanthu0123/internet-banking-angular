@@ -2,13 +2,13 @@
     <div class="col-md-12 grid-margin stretch-card">
       <div class="card">
         <div class="card-body">
-          <h4 class="card-title">Add Beneficiaries</h4>
+          <h4 class="card-title">Add Nominee</h4>
           <div class="fx-row">
             <div id="Beneficiaries-field">
                 <br>
                 <div class="row">                    
                   <div class="col-sm-2">
-                    <h6 class="mb-0">Account No</h6>
+                    <h6 class="mb-0">Nominee Name</h6>
                   </div>
                   <div class="col-sm-9">
                     <input type="text" class="form-control" autofocus>
@@ -17,7 +17,7 @@
                 <hr>
                 <div class="row">
                   <div class="col-sm-2">
-                    <h6 class="mb-0">Account Type</h6>
+                    <h6 class="mb-0">Relation Type</h6>
                   </div>
                   <div class="col-sm-9 ">
                     <input type="text" class="form-control" >
@@ -26,7 +26,7 @@
                 <hr>
                 <div class="row">
                   <div class="col-sm-2">
-                    <h6 class="mb-0">Customer Name</h6>
+                    <h6 class="mb-0">Mobile No</h6>
                   </div>
                   <div class="col-sm-9 ">
                     <input type="text" class="form-control">
@@ -35,21 +35,13 @@
                 <hr>
                 <div class="row">
                   <div class="col-sm-2">
-                    <h6 class="mb-0">Branch</h6>
+                    <h6 class="mb-0">Address</h6>
                   </div>
                   <div class="col-sm-9 ">
                     <input type="text" class="form-control" >
                   </div>
                 </div>
-                <hr>
-                <div class="row">
-                  <div class="col-sm-2">
-                    <h6 class="mb-0">IFSC Code</h6>
-                  </div>
-                  <div class="col-sm-9 ">
-                    <input type="text" class="form-control" >
-                  </div>
-                </div> 
+                <hr>                
                 <br>
                 <div class="row">
                   <div class="col-sm-12">
@@ -60,75 +52,55 @@
                 <br>                                        
           </div>
           <br> 
-          <h4 class="card-title">Beneficiaries List</h4>
+          <h4 class="card-title">Nominee List</h4>
           <br>     
           <div class="table-responsive" data-pattern="priority-columns">
             <table summary="This table shows how to create responsive tables using RWD-Table-Patterns' functionality" class="table table-bordered table-hover">
               <caption class="text-center"> Beneficiaries Details</caption>
               <thead style="background-color: grey;">
                 <tr>                        
-                  <th data-priority="1">Account No</th>
-                  <th data-priority="2">Account Type</th>                          
-                  <th data-priority="3">Customer Name</th>    
-                  <th data-priority="4">Branch</th>                        
-                  <th data-priority="5">IFSC</th>
-                  <th data-priority="6">Action</th>
+                  <th data-priority="1">Nominee Name</th>
+                  <th data-priority="2">Relation Type</th>                          
+                  <th data-priority="3">Mobile No</th>    
+                  <th data-priority="4">Address</th>                                          
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>2780387</td>
-                  <td>Saving</td>
                   <td>Sathish</td>
-                  <td>Kundrathur</td>     
-                  <td>SDFG38721973192</td>
-                  <td style="width: 77px;">
-                    <i class="mdi mdi-delete-sweep float-right" (click)="deletetran(deleteModalContent)"></i></td>
+                  <td>Brother</td>
+                  <td>912345678</td>
+                  <td>Kundrathur</td>                       
                 </tr>
                 <tr>
-                    <td>2780387</td>
-                    <td>Saving</td>
-                    <td>Sathish</td>
-                    <td>Kundrathur</td>     
-                    <td>SDFG38721973192</td>
-                    <td style="width: 77px;">
-                        <i class="mdi mdi-delete-sweep float-right" (click)="deletetran(deleteModalContent)"></i></td>
+                  <td>Sathish</td>
+                  <td>Brother</td>
+                  <td>912345678</td>
+                  <td>Kundrathur</td> 
                 </tr>
                 <tr>
-                    <td>2780387</td>
-                    <td>Saving</td>
-                    <td>Sathish</td>
-                    <td>Kundrathur</td>     
-                    <td>SDFG38721973192</td>
-                    <td style="width: 77px;">
-                        <i class="mdi mdi-delete-sweep float-right" (click)="deletetran(deleteModalContent)"></i></td>
+                  <td>Sathish</td>
+                  <td>Brother</td>
+                  <td>912345678</td>
+                  <td>Kundrathur</td> 
                 </tr>
                 <tr>
-                    <td>2780387</td>
-                    <td>Saving</td>
-                    <td>Sathish</td>
-                    <td>Kundrathur</td>     
-                    <td>SDFG38721973192</td>
-                    <td style="width: 77px;">
-                        <i class="mdi mdi-delete-sweep float-right" (click)="deletetran(deleteModalContent)"></i></td>
+                  <td>Sathish</td>
+                  <td>Brother</td>
+                  <td>912345678</td>
+                  <td>Kundrathur</td> 
                 </tr>
                 <tr>
-                    <td>2780387</td>
-                    <td>Saving</td>
-                    <td>Sathish</td>
-                    <td>Kundrathur</td>     
-                    <td>SDFG38721973192</td>
-                    <td style="width: 77px;">
-                        <i class="mdi mdi-delete-sweep float-right" (click)="deletetran(deleteModalContent)"></i></td>
+                  <td>Sathish</td>
+                  <td>Brother</td>
+                  <td>912345678</td>
+                  <td>Kundrathur</td> 
                 </tr>
                 <tr>
-                    <td>2780387</td>
-                    <td>Saving</td>
-                    <td>Sathish</td>
-                    <td>Kundrathur</td>     
-                    <td>SDFG38721973192</td>
-                    <td style="width: 77px;">
-                        <i class="mdi mdi-delete-sweep float-right" (click)="deletetran(deleteModalContent)"></i></td>
+                  <td>Sathish</td>
+                  <td>Brother</td>
+                  <td>912345678</td>
+                  <td>Kundrathur</td> 
                 </tr>
                 
               </tbody>
