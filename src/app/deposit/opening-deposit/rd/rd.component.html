@@ -1,0 +1,191 @@
+<div class="row">
+    <div class="col-md-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <div *ngIf="field">
+                    <label class="card-title">Create Recurring deposit</label>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <label class="mb-0">How much would you like contribute monthly</label>
+                        </div>
+                        <div class="col-sm-4">
+                            <input type="number" class="form-control" autofocus>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <label class="mb-0">From which account would you like to continue</label>
+                        </div>
+                        <div class="col-sm-4">
+                            <select class="form-control">
+                                <option>XXXXXXXXXXXXX9879</option>
+                                <option>XXXXXXXXXXXXX8789</option>
+                            </select>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <label class="mb-0">Nominee Details</label>
+                        </div>
+                        <div class="col-sm-4">
+                            <input class="form-control" type="text" placeholder="Nominee Name">
+                        </div>
+                        <div class="col-sm-4">
+                            <select class="form-control">
+                                <option>Relationship with Depositor</option>
+                                <option>Mother</option>
+                                <option>Father</option>
+                                <option>sibiling</option>
+                            </select>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <label class="mb-0">For how long would you like to save</label>
+                        </div>
+                        <div class="col-sm-4">
+                            <select class="form-control">
+                                <option>select year</option>
+                                <option>1 year</option>
+                                <option>2 year</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-4">
+                            <select class="form-control">
+                                <option>select month</option>
+                                <option>0 month</option>
+                                <option>1 month</option>
+                            </select>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <label class="mb-0">Schedule a monthly transfer</label>
+                        </div>
+                        <div class="col-sm-4">
+                            <input nbInput placeholder="Opening Date" type="date" class="form-control" name="">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <button type="button" class="btn btn-info btn-fw float-right"
+                                (click)="onNext()">Submit</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div id="rd-receipt">
+                    <div id="rd-receipt" *ngIf="reviewfield">
+                        <label class="card-title">Review Your Recurring deposit details</label>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <label class="mb-0">Name</label>
+                            </div>
+                            <div class="col-sm-9 ">
+                                <label>Kenneth Valdez</label>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <label class="mb-0">monthly contribution</label>
+                            </div>
+                            <div class="col-sm-9 ">
+                                <label>Rs: 100</label>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <label class="mb-0">monthly contribution date</label>
+                            </div>
+                            <div class="col-sm-9 ">
+                                <label>1st of every month</label>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <label class="mb-0">Account</label>
+                            </div>
+                            <div class="col-sm-9 ">
+                                <label>XXXXXXXXXXX9878</label>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <label class="mb-0">Tenure</label>
+                            </div>
+                            <div class="col-sm-9 ">
+                                <label>1 year 0 month</label>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <label class="mb-0">Nominee name</label>
+                            </div>
+                            <div class="col-sm-9 ">
+                                <label>John Smith</label>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <label class="mb-0">Nominee relation with depositor</label>
+                            </div>
+                            <div class="col-sm-9 ">
+                                <label>Father</label>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <label class="mb-0">Maturity date</label>
+                            </div>
+                            <div class="col-sm-9">
+                                <label>12 JAN 2022</label>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <label class="mb-0">Rate of interest</label>
+                            </div>
+                            <div class="col-sm-9">
+                                <label>6.00%</label>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <label class="mb-0">Maturity Amount</label>
+                            </div>
+                            <div class="col-sm-9">
+                                <label>Rs: 1239.00</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <button type="button" class="btn btn-info btn-fw float-right">Confirm</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
