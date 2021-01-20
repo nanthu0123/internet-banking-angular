@@ -74,10 +74,10 @@
             <a class="nav-link" routerLink="Deposit/Deposit-summary" routerLinkActive="active"
               #accountoverview="routerLinkActive">Deposits Account Summary</a>
           </li>
-          <li class="nav-item">            
+          <!-- <li class="nav-item">            
             <a class="nav-link" routerLink="Deposit/Nominee" routerLinkActive="active"
             #accountoverview="routerLinkActive">Nominee</a>
-          </li>
+          </li> -->
         </ul>
       </div>
     </li>
@@ -92,12 +92,9 @@
       <div class="collapse" [ngbCollapse]="!loanCollapsed">
         <ul class="nav flex-column sub-menu">
           <li class="nav-item">
-            <a class="nav-link" routerLink="loan/apply-new-loan" routerLinkActive="active"
-              #modals="routerLinkActive">Apply New Loan</a>
+            <a class="nav-link" routerLink="loan/apply-loan" routerLinkActive="active" #modals="routerLinkActive">Apply
+              Loan</a>
           </li>
-
-
-
           <li class="nav-item">
             <a class="nav-link" routerLink="loan/view-all-loan" routerLinkActive="active"
               #modals="routerLinkActive">View All Loans</a>
