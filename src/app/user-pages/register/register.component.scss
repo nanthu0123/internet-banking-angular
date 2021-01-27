@@ -1,17 +1,174 @@
+* {
+  box-sizing: border-box;
+}
 .bg-img {
-  min-height: 100vh;
-  width: 100%;
-  background: url("../../../assets/images/samples/1280x768/16.jpg") no-repeat
-    center center fixed;
+  height: 100vh;
+  width: 100vw;
+  background: url("../../../assets/images/samples/1280x768/16.jpg");
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  background-position: center center;
+  filter: blur(4px);
+  -webkit-filter: blur(4px);
+  position: absolute;
 }
-.doc-prv img {
-  border: 1px solid rgb(185, 184, 184);
-  margin: 10px;
+// choose country secttion
+.country-container {
+  position: relative;
+  top: 100px;
 }
-.auth-form-light {
-  margin-top: 90px;
+.country-title {
+  text-align: center;
+  color: white;
+}
+.country-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.country-container a {
+  cursor: pointer;
+}
+.country-card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+  transition: 0.3s;
+  width: 300px;
+  height: 400px;
+  margin: 20px;
+}
+.country-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.country-card img {
+  width: 300px;
+  height: 200px;
+}
+
+.country-card .container {
+  padding: 2px 16px;
+}
+
+// register form section
+.registerForm-container {
+  position: relative;
+  top: 100px;
+  .register-title {
+    color: white;
+    text-align: center;
+  }
+}
+.reg-form {
+  margin: auto;
+  width: 50%;
+  padding: 30px 10px;
+  background-color: white;
+  border-radius: 0.3125rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+}
+.aadhar-card {
+  a {
+    cursor: pointer;
+  }
+  img {
+    width: 200px;
+    height: 100px;
+  }
+  p {
+    margin: 0;
+    padding: 0;
+  }
+}
+.pan-card {
+  .pan {
+    cursor: pointer;
+  }
+  img {
+    width: 200px;
+    height: 100px;
+  }
+}
+.photo-copy {
+  .photo {
+    cursor: pointer;
+  }
+  img {
+    height: 100px;
+    width: 100px;
+  }
+}
+// document preview
+.doc-prv-container {
+  position: relative;
+  top: 100px;
+  text-align: center;
+  h1 {
+    color: white;
+  }
+  img {
+    border: 1px solid rgb(185, 184, 184);
+    margin: 10px;
+  }
+  p {
+    color: white;
+    display: inline;
+  }
+}
+
+// account type
+.acc-type-container {
+  position: relative;
+  top: 100px;
+  h1 {
+    color: white;
+    text-align: center;
+  }
+  .acc-type-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+    transition: 0.3s;
+    width: 300px;
+    height: 400px;
+    margin: 10px;
+    padding: 20px 20px;
+  }
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  }
+  .card-body {
+    padding: 10px;
+  }
+}
+.auth-form-light select,
+select option {
+  color: #343a40;
+}
+
+// card styles
+.card-container {
+  display: grid;
+  justify-content: center;
+}
+.content-card {
+  margin-bottom: 10px;
+  width: 600px;
+  background-color: #f7f7f7;
+}
+.content-card:hover {
+  transition: all 0.3s ease;
+  box-shadow: 12px 15px 20px 0px rgba(46, 61, 73, 0.15);
+}
+.content-card a {
+  color: inherit;
+  text-decoration: none;
+}
+.content-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

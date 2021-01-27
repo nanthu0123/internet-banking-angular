@@ -1,77 +1,257 @@
-<div class="bg-img">
-  <div class="d-flex align-items-centre auth px-0">
-    <div class="row w-100 mx-0">
-      <div class="col-md-4">
-        <div class="auth-form-light text-left py-5 px-4 px-sm-5">
-          <div class="brand-logo">
-            <img src="assets/images/logo.svg" alt="logo">
-          </div>
-          <div class="form-group">
-            <label>Upload Adhar Card</label>
-            <div class="input-group">
-              <input type="file" style="display: none;" (change)="onSelectAdharFront($event)" #adharFrontInput>
-              <input type="text" class="form-control file-upload-info" placeholder="Upload Adhar card Front" disabled>
-              <span class="input-group-append">
-                <button class="file-upload-browse btn btn-gradient-primary" type="button"
-                  (click)="adharFrontInput.click()">Upload</button>
-              </span>
-            </div>
-          </div>
+<div class="bg-img"></div>
 
-          <div class="form-group">
-            <div class="input-group">
-              <input type="file" style="display: none;" (change)="onSelectAdharBack($event)" #adharBackInput>
-              <input type="text" class="form-control file-upload-info" placeholder="Upload Adhar card Back" disabled>
-              <span class="input-group-append">
-                <button class="file-upload-browse btn btn-gradient-primary" type="button"
-                  (click)="adharBackInput.click()">Upload</button>
-              </span>
-            </div>
-          </div>
+<!-- country configuration -->
+<div *ngIf="country" class="country-container">
+  <h1 class="country-title">Choose Your Country</h1>
+  <div class="country-body">
+    <div class="card country-card">
+      <img class="img-fluid" src="../../../assets/images/india-gate.png" alt="india_gate">
+      <div class="container">
+        <h4 class="mt-2"><b>India</b></h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, dolores?</p>
+        <hr>
+        <button (click)="onCountryCard()" class="btn btn-success">Register Here</button>
+      </div>
+    </div>
+    <div class=" card country-card">
+      <img class="img-fluid" src="../../../assets/images/Twin_Towers.png" alt="Twin_Towers">
+      <div class="container">
+        <h4 class="mt-2"><b>Malaysia</b></h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, dolores?</p>
+        <hr>
+        <button (click)="onCountryCard()" class="btn btn-success">Register Here</button>
+      </div>
+    </div>
+  </div>
+</div>
 
-          <div class="form-group">
-            <label>Upload PAN Card</label>
-            <div class="input-group">
-              <input type="file" style="display: none;" (change)="onSelectPan($event)" #panInput>
-              <input type="text" class="form-control file-upload-info" placeholder="Upload PAN Card" disabled>
-              <span class="input-group-append">
-                <button class="file-upload-browse btn btn-gradient-primary" type="button"
-                  (click)="panInput.click()">Upload</button>
-              </span>
-            </div>
+<!-- register form -->
+<div *ngIf="RegForm" class="registerForm-container">
+  <h1 class="register-title">Registration Form</h1>
+  <form class="reg-form text-center">
+    <label class="text-center"><b>Upload Aadhar Card</b></label><br>
+    <div class="aadhar-card">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="d-flex justify-content-center">
+            <input type="file" style="display: none;" (change)="onSelectAdharFront($event)" #adharFrontInput>
+            <a class="aadhar-front" (click)="adharFrontInput.click()"><img src="../../../assets/images/adhar_front.png"
+                alt="adhar_front"></a>
           </div>
-
-          <div class="form-group">
-            <label>Upload Photo</label>
-            <div class="input-group">
-              <input type="file" style="display: none;" (change)="onSelectPhoto($event)" #photoInput>
-              <input type="text" class="form-control file-upload-info" placeholder="Upload Photocopy" disabled>
-              <span class="input-group-append">
-                <button class="file-upload-browse btn btn-gradient-primary" type="button"
-                  (click)="photoInput.click()">Upload</button>
-              </span>
-            </div>
+          <p class="text-center">{{aadharFrontName}}</p>
+        </div>
+        <div class="col-md-6">
+          <div class="d-flex justify-content-center">
+            <input type="file" style="display: none;" (change)="onSelectAdharBack($event)" #adharBackInput>
+            <a class="aadhar-back" (click)="adharBackInput.click()"><img src="../../../assets/images/adhar_front.png"
+                alt="aadhar_back"></a>
           </div>
-
-          <div class="mt-3">
-            <button class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn"
-              type="submit">Register</button>
-          </div>
-          <div class="text-center mt-4 font-weight-light">
-            Already have an account? <a routerLink="/user-pages/login" class="text-primary">Login</a>
-          </div>
+          <p class="text-center">{{aadharBackName}}</p>
         </div>
       </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-md-6 border-right">
+        <label class="text-center"><b>Upload PAN Card</b></label><br>
+        <div class="pan-card ">
+          <div class="d-flex justify-content-center">
+            <input type="file" style="display: none;" (change)="onSelectPan($event)" #panInput>
+            <a class="pan" (click)="panInput.click()"><img src="../../../assets/images/adhar_front.png"
+                alt="pan_card"></a>
+          </div>
+          <p class="text-center">{{panName}}</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label class="text-center"><b>Upload Photocopy</b></label><br>
+        <div class="photo-copy">
+          <div class="d-flex justify-content-center">
+            <input type="file" style="display: none;" (change)="onSelectPhoto($event)" #photoInput>
+            <a class="photo" (click)="photoInput.click()"><img src="../../../assets/images/human-avatar.png"
+                alt="photo"></a>
+          </div>
+          <p class="text-center">{{photoName}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="buttons d-flex justify-content-center">
+      <div class="text-center mt-4 mr-4 font-weight-light">
+        Already have an account? <a routerLink="/user-pages/login" class="text-primary">Login</a>
+      </div>
+      <div class="mt-3">
+        <button class="btn btn-danger mr-4" (click)="RegForm=!RegForm;country=!country">Back</button>
+        <button class="btn btn-success float-right" type="submit" (click)="onRegister()">Register</button>
+      </div>
+    </div>
+  </form>
+</div>
 
-      <div class="col-md-4 doc-prv">
-        <div class="auth-form-light text-left py-5 px-4 px-sm-5">
-          <h3>Document Preview</h3>
-          <img [src]="url_adharFront" height="160">
-          <img [src]="url_adharBack" height="160">
-          <img [src]="url_pan" height="160">
-          <img [src]="url_photo" height="160">
+<!-- document preview -->
+<div *ngIf="docPreview" class="doc-prv-container">
+  <h1>Document Preview</h1>
+  <div class="doc-prv d-flex">
+    <div class="aadhar-front-view">
+      <img [src]="url_adharFront" height="150">
+      <p>{{aadharFrontName}}</p>
+    </div>
+    <div class="aadhar-back-view">
+      <img [src]="url_adharBack" height="150">
+      <p>{{aadharBackName}}</p>
+    </div>
+    <div class="pan-view">
+      <img [src]="url_pan" height="150">
+      <p>{{panName}}</p>
+    </div>
+    <div class="photo-view">
+      <img [src]="url_photo" height="150">
+      <p>{{photoName}}</p>
+    </div>
+  </div>
+  <br>
+  <div class="buttons d-flex justify-content-center">
+    <button (click)="docPreview=!docPreview;RegForm=!RegForm" class="btn btn-danger mr-4">Back</button>
+    <button (click)="onDocPreview()" class="btn btn-success">Confirm</button>
+  </div>
+</div>
+<!-- account type -->
+<div *ngIf="accountType" class="acc-type-container">
+  <h1>Choose Your Account Type</h1>
+  <div class="acc-type-body">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Savings Bank Account</h5>
+        <hr style="border-color: #F1948A;">
+        <div class="container">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <ul>
+            <li>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, dolores?</p>
+            </li>
+            <li>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, dolores?</p>
+            </li>
+          </ul>
+          <hr style="border-color: #F1948A;">
+          <button (click)="onCountryCard()" class="btn btn-success btn-block">Create</button>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Current Bank Account</h5>
+        <hr style="border-color: #7DCEA0;">
+        <div class="container">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <ul>
+            <li>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, dolores?</p>
+            </li>
+            <li>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, dolores?</p>
+            </li>
+          </ul>
+          <hr style="border-color: #7DCEA0;">
+          <button (click)="onCountryCard()" class="btn btn-success btn-block">Create</button>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Fixed Deposit Account</h5>
+        <hr style="border-color: #f7dc6f;">
+        <div class="container">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <ul>
+            <li>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, dolores?</p>
+            </li>
+            <li>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, dolores?</p>
+            </li>
+          </ul>
+          <hr style="border-color: #f7dc6f;">
+          <button (click)="onCountryCard()" class="btn btn-success btn-block">Create</button>
         </div>
       </div>
     </div>
   </div>
+  <div class="back-btn d-flex justify-content-center mt-2">
+    <button (click)="accountType=!accountType;docPreview=!docPreview" class="btn btn-danger">Back</button>
+  </div>
+  <!-- <div class="form-group">
+    <h1>Choose Account Type</h1>
+    <hr>
+    <select class="form-control" (change)="selectOption($event)" [(ngModel)]="selected">
+      <option *ngFor="let option of depositOptions" value={{option.name}}>
+        <h3>{{option.name}}</h3>
+      </option>
+    </select>
+    <br>
+    <p>{{selected}}</p>
+    <br>
+    <button class="btn btn-danger">Back</button>
+    <button class="btn btn-success" (click)="onSchemeOptions()">Next</button>
+  </div> -->
+
+</div>
+
+<!-- scheme cards page -->
+<div class="col-md-8" *ngIf="schemeCard">
+  <div class="auth-form-light text-left py-5 px-4">
+    <h1>Choose Scheme</h1>
+    <hr>
+    <div class="card-container">
+      <mat-card class="content-card">
+        <a (click)="onNotification()">
+          <div class="row">
+            <div class="col-sm-2 content-icon">
+              <img class="img-fluid" src="../../../assets/images/deposit/recurring-deposit-2.png"
+                alt="recurring-deposit">
+            </div>
+            <div class="col-sm-10">
+              <h2>Recurring Deposit</h2>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa quasi.</p>
+            </div>
+          </div>
+        </a>
+      </mat-card>
+      <mat-card class="content-card">
+        <a (click)="onNotification()">
+          <div class="row">
+            <div class="col-sm-2 content-icon">
+              <img class="img-fluid" src="../../../assets/images/deposit/recurring-deposit-2.png"
+                alt="recurring-deposit">
+            </div>
+            <div class="col-sm-10">
+              <h2>Recurring Deposit</h2>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa quasi.</p>
+            </div>
+          </div>
+        </a>
+      </mat-card>
+      <mat-card class="content-card">
+        <a (click)="onNotification()">
+          <div class="row">
+            <div class="col-sm-2 content-icon">
+              <img class="img-fluid" src="../../../assets/images/deposit/recurring-deposit-2.png"
+                alt="recurring-deposit">
+            </div>
+            <div class="col-sm-10">
+              <h2>Recurring Deposit</h2>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa quasi.</p>
+            </div>
+          </div>
+        </a>
+      </mat-card>
+    </div>
+  </div>
+</div>
+<!-- notification alert -->
+<div *ngIf="notification" class="auth-form-light text-left py-5 px-4">
+  <h1>acknowledgement</h1>
+  <hr>
+  <p>Confirmation Email has been sent to your email Id, Kindly check out!</p>
+  <button class="btn btn-success mt-4 float-right" routerLink="/user-pages/login"
+    (click)="notification=!notification">OK</button>
 </div>
