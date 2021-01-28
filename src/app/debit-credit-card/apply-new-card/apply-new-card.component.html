@@ -1,115 +1,55 @@
 <div class="card">
     <div class="card-body">
-        <h4 class="card-title">Credit Card Application Form</h4>
+        <h4 class="card-title">Choose Your Credit Card</h4>
         <br>
-
-        <form class="forms-sample">
-            <div class="form-group">
-                <label for="loanNumber">Full Name</label>
-                <div class="row">
-                    <div class="col-md-6">
-                        <input type="text" class="form-control" id="firstName" placeholder="Enter Your First Name"
-                            required>
-                    </div>
-                    <div class="col-md-6">
-                        <input type="text" class="form-control" id="lastName" placeholder="Enter Your Last Name">
-                    </div>
+        <div class="crditCard-container d-flex justify-content-center">
+            <div class="row">
+                <div class="column text-center">
+                    <img style="z-index: 1  ;position: relative; width: 230px;"
+                        src="https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/rewards/card-faces/prime-amex-card-face.png"
+                        alt="credit-card">
+                    <p>Premium Card</p>
+                    <button class="btn btn-success" [popoverOnHover]="false" [popover]="myPopover">Apply</button>
+                </div>
+                <div class="column text-center">
+                    <img style="z-index: 1  ;position: relative; width: 230px;"
+                        src="https://www.sbicard.com/sbi-card-en/resources/img/cardface/shopping/simplyclick-cardface-n.svg"
+                        alt="credit-card">
+                    <p>Premium Card</p>
+                    <button class="btn btn-success" [popoverOnHover]="false" [popover]="myPopover">Apply</button>
+                </div>
+                <div class="column text-center">
+                    <img style="z-index: 1  ;position: relative; width: 230px;"
+                        src="https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/value-savings/card-faces/simplysave-card-face.png"
+                        alt="credit-card">
+                    <p>Premium Card</p>
+                    <button class="btn btn-success" [popoverOnHover]="false" [popover]="myPopover_left">Apply</button>
                 </div>
             </div>
-            <hr>
+        </div>
 
-            <div class="form-group">
-                <div class="row">
-                    <div class="col-md-6">
-                        <label>Gender</label>
-                        <select class="form-control" required>
-                            <option value="yes">Male</option>
-                            <option value="no">Female</option>
-                        </select>
-                    </div>
-                    <div class="col-md-6">
-                        <label>Date of Birth</label>
-                        <input type="date" class="form-control" placeholder="Enter Your Date of Birth" required>
-                    </div>
-                </div>
-            </div>
-            <hr>
+        <!-- popover content -->
+        <popover-content #myPopover placement="middle right" [animation]="true" [closeOnClickOutside]="true"
+            [closeOnMouseOutside]="false">
+            <h5 class="card-title">Card Benifits</h5>
+            <hr style="border-color: #96f18a;">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat, ipsum.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio, velit.</p>
+            <hr style="border-color: #96f18a;">
+            <button class="btn btn-success btn-block">Select</button>
+        </popover-content>
+        <!-- left aligned popover for last card -->
+        <popover-content #myPopover_left placement="middle left" [animation]="true" [closeOnClickOutside]="true"
+            [closeOnMouseOutside]="false">
+            <h5 class="card-title">Card Benifits</h5>
+            <hr style="border-color: #96f18a;">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat, ipsum.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio, velit.</p>
+            <hr style="border-color: #96f18a;">
+            <button class="btn btn-success btn-block">Select</button>
+        </popover-content>
 
-            <div class="form-group">
-                <div class="row">
-                    <div class="col-md-6">
-                        <label>Qualification</label>
-                        <input type="text" class="form-control" placeholder="Enter Your Qualification" required>
-                    </div>
-                    <div class="col-md-6">
-                        <label>PAN Number</label>
-                        <input type="text" class="form-control" placeholder="Enter Your PAN Number" required>
-                    </div>
-                </div>
-            </div>
-            <hr>
-
-            <div class="form-group">
-                <div class="row">
-                    <div class="col-md-6">
-                        <label>Email ID</label>
-                        <input type="email" class="form-control" placeholder="Enter Your Email ID" required>
-                    </div>
-                    <div class="col-md-6">
-                        <label>Phone</label>
-                        <input type="tel" class="form-control" placeholder="Enter Your Phone Number" required>
-                    </div>
-                </div>
-            </div>
-            <hr>
-
-            <div class="form-group">
-                <label>Address</label>
-                <div class="row">
-                    <div class="col-md-6">
-                        <input type="text" class="form-control" placeholder="Address Line 1" required>
-                    </div>
-                    <div class="col-md-6">
-                        <input type="text" class="form-control" placeholder="Address Line 1 (Optional)">
-                    </div>
-                </div>
-                <div class="row pt-4">
-                    <div class="col-md-4">
-                        <input type="text" class="form-control" placeholder="City">
-                    </div>
-                    <div class="col-md-4">
-                        <input type="text" class="form-control" placeholder="State">
-                    </div>
-                    <div class="col-md-4">
-                        <input type="number" class="form-control" placeholder="PIN">
-                    </div>
-                </div>
-            </div>
-            <hr>
-
-
-            <div class="form-group">
-                <div class="row">
-                    <div class="col-md-6">
-                        <label>Account Number</label>
-                        <input type="date" class="form-control" placeholder="Enter Your Account Number" required>
-                    </div>
-                    <div class="col-md-6">
-                        <label>Upload Document</label>
-                        <div class="input-group">
-                            <input type="file" style="display: none;" #docInput required>
-                            <input type="text" class="form-control file-upload-info" placeholder="Upload Photocopy"
-                                disabled>
-                            <span class="input-group-append">
-                                <button class="file-upload-browse btn btn-gradient-primary" type="button"
-                                    (click)="docInput.click()">Upload</button>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <hr>
-            <button type="submit" class="btn btn-success mr-2">Submit</button>
-        </form>
+        <!-- popup dialouge -->
+        <button mat-raised-button></button>
     </div>
 </div>
