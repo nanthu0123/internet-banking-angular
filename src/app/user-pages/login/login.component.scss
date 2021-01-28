@@ -1,12 +1,18 @@
+* {
+  box-sizing: border-box;
+}
 .bg-img {
-  min-height: 100vh;
-  width: 100%;
-  background: url("../../../assets/images/samples/1280x768/1.jpg") no-repeat
-    center center fixed;
+  height: 100vh;
+  width: 100vw;
+  background: url("../../../assets/images/samples/1280x768/1.jpg");
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  background-position: center center;
+  filter: blur(4px);
+  -webkit-filter: blur(4px);
+  position: absolute;
 }
 .auth-form-light {
   position: relative;
