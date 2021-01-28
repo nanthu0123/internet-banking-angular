@@ -144,31 +144,56 @@
     padding: 10px;
   }
 }
-.auth-form-light select,
-select option {
-  color: #343a40;
+// scheme options
+.scheme-container {
+  position: relative;
+  top: 100px;
+  h1 {
+    color: white;
+    text-align: center;
+  }
+  .scheme-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+    transition: 0.3s;
+    width: 300px;
+    height: 400px;
+    margin: 10px;
+    padding: 20px 20px;
+  }
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  }
+  .card-body {
+    padding: 10px;
+  }
 }
-
-// card styles
-.card-container {
-  display: grid;
-  justify-content: center;
-}
-.content-card {
-  margin-bottom: 10px;
-  width: 600px;
-  background-color: #f7f7f7;
-}
-.content-card:hover {
-  transition: all 0.3s ease;
-  box-shadow: 12px 15px 20px 0px rgba(46, 61, 73, 0.15);
-}
-.content-card a {
-  color: inherit;
-  text-decoration: none;
-}
-.content-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+// acknowledgement
+.acknowledgement-container {
+  position: relative;
+  top: 100px;
+  h1 {
+    color: white;
+    text-align: center;
+  }
+  .acknowledgement-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+    transition: 0.3s;
+    width: 600px;
+    height: 300px;
+    padding: 10px 10px;
+    margin: 0;
+  }
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  }
 }

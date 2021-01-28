@@ -6,25 +6,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
+  // main sections 
   country: Boolean = true;
   RegForm: Boolean = false;
   docPreview: Boolean = false;
   accountType: Boolean = false;
+  notification: Boolean = false;
+  // schemes sections
+  currentAcc: Boolean = false;
+  savingAcc: Boolean = false;
+  fixedAcc: Boolean = false;
   // register page members
   aadharFrontName: string;
   aadharBackName: string;
   panName: string;
   photoName: string;
 
-  depositOptions: any[] = [
-    { name: 'Current Account' },
-    { name: 'Savings Account' },
-    { name: 'Fixed Deposit Account' },
-    { name: 'Recurring Deposit Account' },
-  ];
-  selected: String = "Choose Option";
-  schemeCard: Boolean = false;
-  notification: Boolean = false;
+
 
   constructor() { };
 
@@ -42,21 +40,28 @@ export class RegisterComponent implements OnInit {
     this.docPreview = false;
     this.accountType = true;
   }
-  selectOption(event: any) {
-    //getted from event
-    console.log(event.target.value);
-    return event.target.value;
-
-  }
-  onSchemeOptions() {
-    this.accountType = false;
-    this.schemeCard = true;
-
-  }
   onNotification() {
     this.notification = true;
-    this.schemeCard = false;
+    this.currentAcc = false;
+    this.savingAcc = false;
+    this.fixedAcc = false;
+
   }
+
+  //account types to enable scheme sections
+  onCurrent() {
+    this.currentAcc = true;
+    this.accountType = false;
+  }
+  onSavings() {
+    this.savingAcc = true;
+    this.accountType = false;
+  }
+  onFixed() {
+    this.fixedAcc = true;
+    this.accountType = false;
+  }
+
 
 
 

@@ -1,6 +1,6 @@
 <div class="bg-img"></div>
 
-<!-- country configuration -->
+<!-- country selection -->
 <div *ngIf="country" class="country-container">
   <h1 class="country-title">Choose Your Country</h1>
   <div class="country-body">
@@ -133,7 +133,7 @@
             </li>
           </ul>
           <hr style="border-color: #F1948A;">
-          <button (click)="onCountryCard()" class="btn btn-success btn-block">Create</button>
+          <button (click)="onSavings()" class="btn btn-success btn-block">Create</button>
         </div>
       </div>
     </div>
@@ -152,7 +152,7 @@
             </li>
           </ul>
           <hr style="border-color: #7DCEA0;">
-          <button (click)="onCountryCard()" class="btn btn-success btn-block">Create</button>
+          <button (click)="onCurrent()" class="btn btn-success btn-block">Create</button>
         </div>
       </div>
     </div>
@@ -171,7 +171,7 @@
             </li>
           </ul>
           <hr style="border-color: #f7dc6f;">
-          <button (click)="onCountryCard()" class="btn btn-success btn-block">Create</button>
+          <button (click)="onFixed()" class="btn btn-success btn-block">Create</button>
         </div>
       </div>
     </div>
@@ -179,79 +179,200 @@
   <div class="back-btn d-flex justify-content-center mt-2">
     <button (click)="accountType=!accountType;docPreview=!docPreview" class="btn btn-danger">Back</button>
   </div>
-  <!-- <div class="form-group">
-    <h1>Choose Account Type</h1>
-    <hr>
-    <select class="form-control" (change)="selectOption($event)" [(ngModel)]="selected">
-      <option *ngFor="let option of depositOptions" value={{option.name}}>
-        <h3>{{option.name}}</h3>
-      </option>
-    </select>
-    <br>
-    <p>{{selected}}</p>
-    <br>
-    <button class="btn btn-danger">Back</button>
-    <button class="btn btn-success" (click)="onSchemeOptions()">Next</button>
-  </div> -->
-
 </div>
-
-<!-- scheme cards page -->
-<div class="col-md-8" *ngIf="schemeCard">
-  <div class="auth-form-light text-left py-5 px-4">
-    <h1>Choose Scheme</h1>
-    <hr>
-    <div class="card-container">
-      <mat-card class="content-card">
-        <a (click)="onNotification()">
-          <div class="row">
-            <div class="col-sm-2 content-icon">
-              <img class="img-fluid" src="../../../assets/images/deposit/recurring-deposit-2.png"
-                alt="recurring-deposit">
-            </div>
-            <div class="col-sm-10">
-              <h2>Recurring Deposit</h2>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa quasi.</p>
-            </div>
-          </div>
-        </a>
-      </mat-card>
-      <mat-card class="content-card">
-        <a (click)="onNotification()">
-          <div class="row">
-            <div class="col-sm-2 content-icon">
-              <img class="img-fluid" src="../../../assets/images/deposit/recurring-deposit-2.png"
-                alt="recurring-deposit">
-            </div>
-            <div class="col-sm-10">
-              <h2>Recurring Deposit</h2>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa quasi.</p>
-            </div>
-          </div>
-        </a>
-      </mat-card>
-      <mat-card class="content-card">
-        <a (click)="onNotification()">
-          <div class="row">
-            <div class="col-sm-2 content-icon">
-              <img class="img-fluid" src="../../../assets/images/deposit/recurring-deposit-2.png"
-                alt="recurring-deposit">
-            </div>
-            <div class="col-sm-10">
-              <h2>Recurring Deposit</h2>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa quasi.</p>
-            </div>
-          </div>
-        </a>
-      </mat-card>
+<!-- current account schemes -->
+<div *ngIf="currentAcc" class="scheme-container">
+  <h1>Choose Your Scheme for Current Account</h1>
+  <div class="scheme-body">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Business Scheme</h5>
+        <hr style="border-color: #F1948A;">
+        <div class="container">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <ul>
+            <li>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, dolores?</p>
+            </li>
+            <li>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, dolores?</p>
+            </li>
+          </ul>
+          <hr style="border-color: #F1948A;">
+          <button (click)="onNotification()" class="btn btn-success btn-block">Create</button>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Public Provident Fund</h5>
+        <hr style="border-color: #7DCEA0;">
+        <div class="container">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <ul>
+            <li>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, dolores?</p>
+            </li>
+            <li>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, dolores?</p>
+            </li>
+          </ul>
+          <hr style="border-color: #7DCEA0;">
+          <button (click)="onNotification()" class="btn btn-success btn-block">Create</button>
+        </div>
+      </div>
     </div>
   </div>
+  <div class="back-btn d-flex justify-content-center mt-2">
+    <button (click)="currentAcc=!currentAcc;accountType=!accountType" class="btn btn-danger">Back</button>
+  </div>
 </div>
-<!-- notification alert -->
-<div *ngIf="notification" class="auth-form-light text-left py-5 px-4">
-  <h1>acknowledgement</h1>
-  <hr>
-  <p>Confirmation Email has been sent to your email Id, Kindly check out!</p>
-  <button class="btn btn-success mt-4 float-right" routerLink="/user-pages/login"
-    (click)="notification=!notification">OK</button>
+<!-- savings account schemes -->
+<div *ngIf="savingAcc" class="scheme-container">
+  <h1>Choose Your Scheme for Savings Bank Account</h1>
+  <div class="scheme-body">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Senior Citizen Savings Scheme</h5>
+        <hr style="border-color: #F1948A;">
+        <div class="container">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <ul>
+            <li>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, dolores?</p>
+            </li>
+            <li>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, dolores?</p>
+            </li>
+          </ul>
+          <hr style="border-color: #F1948A;">
+          <button (click)="onNotification()" class="btn btn-success btn-block">Create</button>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Monthly Income Scheme</h5>
+        <hr style="border-color: #F1948A;">
+        <div class="container">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <ul>
+            <li>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, dolores?</p>
+            </li>
+            <li>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, dolores?</p>
+            </li>
+          </ul>
+          <hr style="border-color: #F1948A;">
+          <button (click)="onNotification()" class="btn btn-success btn-block">Create</button>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Public Provident Fund</h5>
+        <hr style="border-color: #F1948A;">
+        <div class="container">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <ul>
+            <li>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, dolores?</p>
+            </li>
+            <li>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, dolores?</p>
+            </li>
+          </ul>
+          <hr style="border-color: #F1948A;">
+          <button (click)="onNotification()" class="btn btn-success btn-block">Create</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="back-btn d-flex justify-content-center mt-2">
+    <button (click)="savingAcc=!savingAcc;accountType=!accountType" class="btn btn-danger">Back</button>
+  </div>
+</div>
+<!-- fixed deposit scheme -->
+<div *ngIf="fixedAcc" class="scheme-container">
+  <h1>Choose Your Scheme for Fixed Deposit Account</h1>
+  <div class="scheme-body">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Senior Citizen Savings Scheme</h5>
+        <hr style="border-color: #F1948A;">
+        <div class="container">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <ul>
+            <li>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, dolores?</p>
+            </li>
+            <li>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, dolores?</p>
+            </li>
+          </ul>
+          <hr style="border-color: #F1948A;">
+          <button (click)="onNotification()" class="btn btn-success btn-block">Create</button>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Monthly Income Scheme</h5>
+        <hr style="border-color: #F1948A;">
+        <div class="container">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <ul>
+            <li>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, dolores?</p>
+            </li>
+            <li>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, dolores?</p>
+            </li>
+          </ul>
+          <hr style="border-color: #F1948A;">
+          <button (click)="onNotification()" class="btn btn-success btn-block">Create</button>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Public Provident Fund</h5>
+        <hr style="border-color: #F1948A;">
+        <div class="container">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <ul>
+            <li>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, dolores?</p>
+            </li>
+            <li>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, dolores?</p>
+            </li>
+          </ul>
+          <hr style="border-color: #F1948A;">
+          <button (click)="onNotification()" class="btn btn-success btn-block">Create</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="back-btn d-flex justify-content-center mt-2">
+    <button (click)="fixedAcc=!fixedAcc;accountType=!accountType" class="btn btn-danger">Back</button>
+  </div>
+</div>
+
+<!-- acknowledgement -->
+<div *ngIf="notification" class="acknowledgement-container">
+  <div class="acknowledgement-body">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">acknowledgement</h5>
+        <hr>
+        <div class="container">
+          <p>Confirmation Email has been sent to your email Id, Kindly check out!</p>
+        </div>
+      </div>
+      <button class="btn btn-success float-right" routerLink="/user-pages/login"
+        (click)="notification=!notification">OK</button>
+    </div>
+  </div>
 </div>
