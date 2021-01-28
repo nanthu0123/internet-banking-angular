@@ -7,27 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FDComponent implements OnInit {
 
-  rdfield: boolean = true;
-  reviewrdfield: boolean = false;
-  fdfield: boolean = false;
+  form: boolean = true;
+  schemes: Boolean = false;
+  preview: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  rddetails() {
-    this.rdfield = false;
-    this.reviewrdfield = true;
-    this.fdfield = false;
+  toSchemes() {
+    this.form = false;
+    this.schemes = true;
   }
-
-  reviewfield() {
-
+  toPreview() {
+    this.preview = true;
+    this.schemes = false;
   }
-
-  rdfd() {
-    this.rdfield = false;
-    this.fdfield = true;
-  }
-
 }

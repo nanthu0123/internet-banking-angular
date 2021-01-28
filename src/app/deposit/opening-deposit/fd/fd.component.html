@@ -3,8 +3,8 @@
         <div class="card">
             <div class="card-body">
 
-                <div *ngIf="rdfield">
-                    <label class="card-title">Create Fixed deposit</label>
+                <div *ngIf="form">
+                    <label class="card-title">Open Fixed deposit</label>
                     <hr>
                     <div class="row">
                         <div class="col-sm-3">
@@ -22,6 +22,7 @@
                         </div>
                         <div class="col-sm-4">
                             <select class="form-control">
+                                <option disabled selected hidden>Choose Account Number</option>
                                 <option>XXXXXXXXXXXXX9879</option>
                                 <option>XXXXXXXXXXXXX8789</option>
                             </select>
@@ -38,7 +39,7 @@
                         </div>
                         <div class="col-sm-4">
                             <select class="form-control">
-                                <option>Relationship with Depositor</option>
+                                <option disabled selected hidden>Relationship with Depositor</option>
                                 <option>Mother</option>
                                 <option>Father</option>
                                 <option>sibiling</option>
@@ -53,14 +54,14 @@
                         </div>
                         <div class="col-sm-4">
                             <select class="form-control">
-                                <option>select year</option>
+                                <option disabled selected hidden>select year</option>
                                 <option>1 year</option>
                                 <option>2 year</option>
                             </select>
                         </div>
                         <div class="col-sm-4">
                             <select class="form-control">
-                                <option>select month</option>
+                                <option disabled selected hidden>select month</option>
                                 <option>0 month</option>
                                 <option>1 month</option>
                             </select>
@@ -70,82 +71,172 @@
                     <br>
                     <div class="row">
                         <div class="col-sm-12">
-                            <button type="button" class="btn btn-info btn-fw float-right" (click)="rddetails()">Submit
+                            <button type="button" class="btn btn-info btn-fw float-right" (click)="toSchemes()">Submit
                             </button>
                         </div>
                     </div>
                 </div>
 
-                <div id="rd-receipt">
-                    <div id="rd-receipt" *ngIf="reviewrdfield">
-                        <label class="card-title">Review Your Recurring deposit details</label>
-                        <hr>
-                        <div class="row">
-                            <div class="col-sm-3">
-                                <label class="mb-0">Name</label>
-                            </div>
-                            <div class="col-sm-9 ">
-                                <label>Kenneth Valdez</label>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="row">
-                            <div class="col-sm-3">
-                                <label class="mb-0">Deposit Amount</label>
-                            </div>
-                            <div class="col-sm-9 ">
-                                <label>Rs: 120000.00</label>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="row">
-                            <div class="col-sm-3">
-                                <label class="mb-0">Account</label>
-                            </div>
-                            <div class="col-sm-9 ">
-                                <label>XXXXXXXXXXX9878</label>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="row">
-                            <div class="col-sm-3">
-                                <label class="mb-0">Tenure</label>
-                            </div>
-                            <div class="col-sm-9 ">
-                                <label>1 year 0 month</label>
+                <div *ngIf="schemes" class="schemes-container">
+                    <h1 class="card-title">Schemes</h1>
+                    <hr>
+                    <div class="schemes-body d-flex justify-content-center">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Monthly Scheme</h5>
+                                <hr style="border-color: #96f18a;">
+                                <div class="container">
+                                    <p><b>Scheme Details:</b> </p>
+
+                                    <ul>
+                                        <li>
+                                            <p>Min.Deposit Amount : 2000</p>
+                                        </li>
+                                        <li>
+                                            <p> Min.Period : 1 Months </p>
+                                        </li>
+                                        <li>
+                                            <p>Interest Rate : 2%/month </p>
+                                        </li>
+                                        <li>
+                                            <p> Tenure Period : 5 Months </p>
+                                        </li>
+                                    </ul>
+                                    <hr style="border-color: #96f18a;">
+                                    <button (click)="toPreview()" class="btn btn-success btn-block">Select</button>
+                                </div>
                             </div>
                         </div>
-                        <hr>
-                        <div class="row">
-                            <div class="col-sm-3">
-                                <label class="mb-0">Maturity date</label>
-                            </div>
-                            <div class="col-sm-9">
-                                <label>12 JAN 2022</label>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Quarterly Scheme</h5>
+                                <hr style="border-color: #96f18a;">
+                                <div class="container">
+                                    <p><b>Scheme Details:</b> </p>
+
+                                    <ul>
+                                        <li>
+                                            <p>Min.Deposit Amount : 2000</p>
+                                        </li>
+                                        <li>
+                                            <p> Min.Period : 1 Months </p>
+                                        </li>
+                                        <li>
+                                            <p>Interest Rate : 2%/month </p>
+                                        </li>
+                                        <li>
+                                            <p> Tenure Period : 5 Months </p>
+                                        </li>
+                                    </ul>
+                                    <hr style="border-color: #96f18a;">
+                                    <button (click)="toPreview()" class="btn btn-success btn-block">Select</button>
+                                </div>
                             </div>
                         </div>
-                        <hr>
-                        <div class="row">
-                            <div class="col-sm-3">
-                                <label class="mb-0">Rate of interest</label>
-                            </div>
-                            <div class="col-sm-9">
-                                <label>6.00%</label>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">annual scheme</h5>
+                                <hr style="border-color: #96f18a;">
+                                <div class="container">
+                                    <p><b>Scheme Details:</b> </p>
+
+                                    <ul>
+                                        <li>
+                                            <p>Min.Deposit Amount : 2000</p>
+                                        </li>
+                                        <li>
+                                            <p> Min.Period : 1 Months </p>
+                                        </li>
+                                        <li>
+                                            <p>Interest Rate : 2%/month </p>
+                                        </li>
+                                        <li>
+                                            <p> Tenure Period : 5 Months </p>
+                                        </li>
+                                    </ul>
+                                    <hr style="border-color: #96f18a;">
+                                    <button (click)="toPreview()" class="btn btn-success btn-block">Select</button>
+                                </div>
                             </div>
                         </div>
-                        <hr>
-                        <div class="row">
-                            <div class="col-sm-3">
-                                <label class="mb-0">Maturity Amount</label>
-                            </div>
-                            <div class="col-sm-9">
-                                <label>Rs: 123000.00</label>
-                            </div>
+                    </div>
+                    <div class="button d-flex justify-content-center">
+                        <button type="button" class="btn btn-danger" (click)="schemes=!schemes;form=!form">Back
+                        </button>
+                    </div>
+                </div>
+
+
+                <div *ngIf="preview" class="preview">
+                    <label class="card-title">Review Your Recurring deposit details</label>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <label class="mb-0">Name</label>
                         </div>
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <button type="button" class="btn btn-info btn-fw float-right">Confirm</button>
-                            </div>
+                        <div class="col-sm-9 ">
+                            <label>Kenneth Valdez</label>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <label class="mb-0">Deposit Amount</label>
+                        </div>
+                        <div class="col-sm-9 ">
+                            <label>Rs: 120000.00</label>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <label class="mb-0">Account</label>
+                        </div>
+                        <div class="col-sm-9 ">
+                            <label>XXXXXXXXXXX9878</label>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <label class="mb-0">Tenure</label>
+                        </div>
+                        <div class="col-sm-9 ">
+                            <label>1 year 0 month</label>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <label class="mb-0">Maturity date</label>
+                        </div>
+                        <div class="col-sm-9">
+                            <label>12 JAN 2022</label>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <label class="mb-0">Rate of interest</label>
+                        </div>
+                        <div class="col-sm-9">
+                            <label>6.00%</label>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <label class="mb-0">Maturity Amount</label>
+                        </div>
+                        <div class="col-sm-9">
+                            <label>Rs: 123000.00</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 mt-4">
+                            <button (click)="preview=!preview;schemes=!schemes"
+                                class="btn btn-danger mr-2 btn-fw">Back</button>
+                            <button class="btn btn-info btn-fw float-right">Confirm</button>
                         </div>
                     </div>
                 </div>
