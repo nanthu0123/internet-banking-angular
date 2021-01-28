@@ -1,165 +1,103 @@
-
 <div class="row">
-    <div class="col-md-12 grid-margin stretch-card">
-      <div class="card">
-        <div class="card-body">
-            <div id="rd-receipt" *ngIf="fd_rd_field">
-          <h4 class="card-title">Recurring Deposits Summary</h4>
-          <div class="table-responsive" data-pattern="priority-columns">
-            <table summary="This table shows how to create responsive tables using RWD-Table-Patterns' functionality" class="table table-bordered table-hover">
-                <caption class="text-center">Recurring Deposits Summary</caption>
-                <thead style="background-color: grey;">
-                  <tr>                        
-                    <th data-priority="1">Account No</th>
-                    <th data-priority="2">Amount</th>                          
-                    <th data-priority="3">Interest</th>    
-                    <th data-priority="4">Maturity Time</th>                                          
-                    <th data-priority="5">Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>SDFG38721973192</td>
-                    <td>100</td>
-                    <td>6.00%</td>
-                    <td>1 year 0 month</td>                         
-                    <td style="width: 77px;"><i class="mdi mdi-table-edit float-left"  (click)="movetodetailspage()"></i>
-                        <i class="mdi mdi-delete-sweep float-right" ></i></td>
-                  </tr>                                
-                </tbody>
-                <tfoot>                  
-                </tfoot>
-              </table>
-          </div>
-          <br>
-          <br>
-          <h4 class="card-title">Fixed Deposits Summary</h4>
-          <div class="table-responsive" data-pattern="priority-columns">
-            <table summary="This table shows how to create responsive tables using RWD-Table-Patterns' functionality" class="table table-bordered table-hover">
-                <caption class="text-center">Fixed Deposits Summary</caption>
-                <thead style="background-color: grey;">
-                  <tr>                        
-                    <th data-priority="1">Account No</th>
-                    <th data-priority="2">Amount</th>                          
-                    <th data-priority="3">Interest</th>    
-                    <th data-priority="4">Maturity Time</th>                                          
-                    <th data-priority="5">Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>SDFG38721973192</td>
-                    <td>100</td>
-                    <td>6.00%</td>
-                    <td>1 year 0 month</td>                         
-                    <td style="width: 77px;"><i class="mdi mdi-table-edit float-left"  ></i>
-                        <i class="mdi mdi-delete-sweep float-right" ></i></td>
-                  </tr>                                
-                </tbody>
-                <tfoot>                  
-                </tfoot>
-              </table>
-          </div>
-            </div>
-          <div id="rd-receipt" *ngIf="reviewrdfield">
-            <h4 class="card-title">Review Your Recurring deposit details
-                <button type="button" class="btn btn-danger btn-fw float-right">Close Recurring deposit</button>
-            </h4>            
-            <br>
-            <div class="row">
-                <div class="col-sm-3">
-                  <h6 class="mb-0">Name</h6>
-                </div>
-                <div class="col-sm-9 ">
-                  <label>Kenneth Valdez</label>
-                </div>
-              </div>
-              <hr>
-              <div class="row">
-                <div class="col-sm-3">
-                  <h6 class="mb-0">monthly contribution</h6>
-                </div>
-                <div class="col-sm-5 ">
-                  <input type="text" class="form-control" value="100" disabled>
-                </div>
-              </div>
-              <hr>
-              <div class="row">
-                <div class="col-sm-3">
-                  <h6 class="mb-0">monthly contribution date</h6>
-                </div>
-                <div class="col-sm-9 ">
-                  <label>1st of every month</label>
-                </div>
-              </div>
-              <hr>
-              <div class="row">
-                <div class="col-sm-3">
-                  <h6 class="mb-0">Account</h6>
-                </div>
-                <div class="col-sm-9 ">
-                  <label>XXXXXXXXXXX9878</label>
-                </div>
-              </div>
-              <hr>
-              <div class="row">                    
-                <div class="col-sm-3">
-                  <label class="mb-0">Tenure</label>
-                </div>
-                <div class="col-sm-4">
-                    <select  class="form-control" disabled>                      
-                        <option>1 year</option>
-                        <option>2 year</option>                 
-                   5 </select>
-                </div>
-                <div class="col-sm-4">
-                    <select  class="form-control" disabled>                     
-                        <option>0 month</option>
-                        <option>1 month</option>                 
-                    </select>
-                </div>
-              </div>                                            
-              <hr>
-              <div class="row">
-                <div class="col-sm-3">
-                  <h6 class="mb-0">Maturity date</h6>
-                </div>
-                <div class="col-sm-9">
-                  <label>12 JAN 2022</label>
-                </div>
-              </div> 
-              <hr>
-              <div class="row">
-                <div class="col-sm-3">
-                  <h6 class="mb-0">Rate of interest</h6>
-                </div>
-                <div class="col-sm-9">
-                  <label>6.00%</label>
-                </div>
-              </div> 
-              <hr>
-              <div class="row">
-                <div class="col-sm-3">
-                  <h6 class="mb-0">Maturity Amount</h6>
-                </div>
-                <div class="col-sm-9">
-                  <label>Rs: 1239.00</label>
-                </div>
-              </div> 
-              <hr> 
-              <div class="row">
-                <div class="col-sm-3">
-                  <h6 class="mb-0">Nominee</h6>
-                </div>
-                <div class="col-sm-5">
-                  <select  class="form-control" disabled>                    
-                    <option selected>user1</option>
-                    <option>user2</option>                 
-                </select>
-                </div>
-              </div>             
-          </div> 
+  <div class="col-md-12 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+
+        <h4 class="card-title">Schemes</h4>
+        <hr>
+        <h4>General Public FD Rate</h4>
+        <div class="table-responsive" data-pattern="priority-columns">
+          <table class="table table-bordered table-hover">
+            <thead style="background-color: rgb(192, 192, 192);">
+              <tr>
+                <th data-priority="1">Scheme Name</th>
+                <th data-priority="2">Interest</th>
+                <th data-priority="3">Maturity Amount</th>
+                <th data-priority="4">Tenure</th>
+                <th data-priority="5" style="text-align: center;">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Monthly Scheme</td>
+                <td>2.00%</td>
+                <td>12000.00</td>
+                <td>8 months</td>
+                <td style="text-align: center;">
+                  <input type="checkbox">
+                </td>
+              </tr>
+              <tr>
+                <td>Quarterly Scheme</td>
+                <td>2.50%</td>
+                <td>12500.00</td>
+                <td>2 years 0 month</td>
+                <td style="text-align: center;">
+                  <input type="checkbox">
+                </td>
+              </tr>
+              <tr>
+                <td>Annual Scheme</td>
+                <td>5.00%</td>
+                <td>12000.00</td>
+                <td>5 years 0 month</td>
+                <td style="text-align: center;">
+                  <input type="checkbox">
+                </td>
+              </tr>
+            </tbody>
+            <tfoot>
+            </tfoot>
+          </table>
+        </div>
+        <br>
+        <!-- Senior Citizens FD Rate -->
+        <h4>Senior Citizens FD Rate</h4>
+        <div class="table-responsive" data-pattern="priority-columns">
+          <table class="table table-bordered table-hover">
+            <thead style="background-color: rgb(192, 192, 192);">
+              <tr>
+                <th data-priority="1">Scheme Name</th>
+                <th data-priority="2">Interest</th>
+                <th data-priority="3">Maturity Amount</th>
+                <th data-priority="4">Tenure</th>
+                <th data-priority="5" style="text-align: center;">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Monthly Scheme</td>
+                <td>2.00%</td>
+                <td>12000.00</td>
+                <td>8 months</td>
+                <td style="text-align: center;">
+                  <input type="checkbox">
+                </td>
+              </tr>
+              <tr>
+                <td>Quarterly Scheme</td>
+                <td>2.50%</td>
+                <td>12500.00</td>
+                <td>2 years 0 month</td>
+                <td style="text-align: center;">
+                  <input type="checkbox">
+                </td>
+              </tr>
+              <tr>
+                <td>Annual Scheme</td>
+                <td>5.00%</td>
+                <td>12000.00</td>
+                <td>5 years 0 month</td>
+                <td style="text-align: center;">
+                  <input type="checkbox">
+                </td>
+              </tr>
+            </tbody>
+            <tfoot>
+            </tfoot>
+          </table>
         </div>
       </div>
     </div>
+  </div>
 </div>
