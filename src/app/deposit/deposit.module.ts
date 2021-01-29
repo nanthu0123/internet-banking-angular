@@ -4,7 +4,7 @@ import { OpeningDepositComponent } from './opening-deposit/opening-deposit.compo
 import { Routes, RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MatCardModule } from '@angular/material/card';
-import { FormsModule } from '@angular/forms';
+import { FormsModule,ReactiveFormsModule} from '@angular/forms';
 
 
 import { DepositAccountSummaryComponent } from './deposit-account-summary/deposit-account-summary.component';
@@ -36,6 +36,7 @@ const routes: Routes = [
     NgbModule,
     MatCardModule,
     FormsModule,
+    ReactiveFormsModule,
     RouterModule.forChild(routes),
   ]
 })
