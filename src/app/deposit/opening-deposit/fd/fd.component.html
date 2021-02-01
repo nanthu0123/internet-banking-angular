@@ -52,9 +52,7 @@
                         <div class="col-sm-3">
                             <label class="mb-0">Nominee Details</label>
                         </div>
-                        <div class="col-sm-4">
-                            <input class="form-control" type="text" placeholder="Nominee Name">
-                        </div>
+                        <br>
                         <div class="col-sm-4">
                             <select class="form-control">
                                 <option disabled selected hidden>Relationship with Depositor</option>
@@ -114,269 +112,270 @@
                         </div>
                     </div>
                 </form>
-                <!-- schemes card -->
-                <div *ngIf="schemes" class="schemes-container">
-                    <h1 class="card-title">Schemes</h1>
-                    <hr>
-                    <div class="schemes-body d-flex justify-content-center">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Monthly Scheme</h5>
-                                <hr style="border-color: #96f18a;">
-                                <div class="container">
-                                    <p><b>Scheme Details:</b> </p>
+            </div>
 
-                                    <ul>
-                                        <li>
-                                            <p>Min.Deposit Amount : 2000</p>
-                                        </li>
-                                        <li>
-                                            <p> Min.Period : 1 Months </p>
-                                        </li>
-                                        <li>
-                                            <p>Interest Rate : 2%/month </p>
-                                        </li>
-                                        <li>
-                                            <p> Tenure Period : 5 Months </p>
-                                        </li>
-                                    </ul>
-                                    <hr style="border-color: #96f18a;">
-                                    <button (click)="toPreview()" class="btn btn-success btn-block">Select</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Quarterly Scheme</h5>
-                                <hr style="border-color: #96f18a;">
-                                <div class="container">
-                                    <p><b>Scheme Details:</b> </p>
+            <div *ngIf="schemes" class="schemes-container">
+                <h1 class="card-title">Schemes</h1>
+                <hr>
+                <div class="schemes-body d-flex justify-content-center">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Monthly Scheme</h5>
+                            <hr style="border-color: #96f18a;">
+                            <div class="container">
+                                <p><b>Scheme Details:</b> </p>
 
-                                    <ul>
-                                        <li>
-                                            <p>Min.Deposit Amount : 2000</p>
-                                        </li>
-                                        <li>
-                                            <p> Min.Period : 1 Months </p>
-                                        </li>
-                                        <li>
-                                            <p>Interest Rate : 2%/month </p>
-                                        </li>
-                                        <li>
-                                            <p> Tenure Period : 5 Months </p>
-                                        </li>
-                                    </ul>
-                                    <hr style="border-color: #96f18a;">
-                                    <button (click)="toPreview()" class="btn btn-success btn-block">Select</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">annual scheme</h5>
+                                <ul>
+                                    <li>
+                                        <p>Min.Deposit Amount : 2000</p>
+                                    </li>
+                                    <li>
+                                        <p> Min.Period : 1 Months </p>
+                                    </li>
+                                    <li>
+                                        <p>Interest Rate : 2%/month </p>
+                                    </li>
+                                    <li>
+                                        <p> Tenure Period : 5 Months </p>
+                                    </li>
+                                </ul>
                                 <hr style="border-color: #96f18a;">
-                                <div class="container">
-                                    <p><b>Scheme Details:</b> </p>
-
-                                    <ul>
-                                        <li>
-                                            <p>Min.Deposit Amount : 2000</p>
-                                        </li>
-                                        <li>
-                                            <p> Min.Period : 1 Months </p>
-                                        </li>
-                                        <li>
-                                            <p>Interest Rate : 2%/month </p>
-                                        </li>
-                                        <li>
-                                            <p> Tenure Period : 5 Months </p>
-                                        </li>
-                                    </ul>
-                                    <hr style="border-color: #96f18a;">
-                                    <button (click)="toPreview()" class="btn btn-success btn-block">Select</button>
-                                </div>
+                                <button (click)="toPreview()" class="btn btn-success btn-block">Select</button>
                             </div>
                         </div>
                     </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Quarterly Scheme</h5>
+                            <hr style="border-color: #96f18a;">
+                            <div class="container">
+                                <p><b>Scheme Details:</b> </p>
 
-                    <!-- detailed info tables -->
-                    <div *ngIf="detailedInfo" class="detailed-info mt-4">
-                        <h5 class="card-title">General Public FD Rate</h5>
-                        <div class="table-responsive" data-pattern="priority-columns">
-                            <table class="table table-bordered table-hover">
-                                <thead style="background-color: rgb(192, 192, 192);">
-                                    <tr>
-                                        <th data-priority="1">Scheme Name</th>
-                                        <th data-priority="2">Interest</th>
-                                        <th data-priority="3">Deposit Amount</th>
-                                        <th data-priority="4">Tenure</th>
-                                        <th data-priority="5" style="text-align: center;">Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Monthly Scheme</td>
-                                        <td>2.00%</td>
-                                        <td>12000.00</td>
-                                        <td>8 months</td>
-                                        <td style="text-align: center;">
-                                            <input type="checkbox">
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Quarterly Scheme</td>
-                                        <td>2.50%</td>
-                                        <td>12500.00</td>
-                                        <td>2 years 0 month</td>
-                                        <td style="text-align: center;">
-                                            <input type="checkbox">
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Annual Scheme</td>
-                                        <td>5.00%</td>
-                                        <td>12000.00</td>
-                                        <td>5 years 0 month</td>
-                                        <td style="text-align: center;">
-                                            <input type="checkbox">
-                                        </td>
-                                    </tr>
-                                </tbody>
-                                <tfoot>
-                                </tfoot>
-                            </table>
-                        </div>
-                        <br>
-                        <h5 class="card-title">Senior Citizens FD Rate</h5>
-                        <div class="table-responsive" data-pattern="priority-columns">
-                            <table class="table table-bordered table-hover">
-                                <thead style="background-color: rgb(192, 192, 192);">
-                                    <tr>
-                                        <th data-priority="1">Scheme Name</th>
-                                        <th data-priority="2">Interest</th>
-                                        <th data-priority="3">Depoit Amount</th>
-                                        <th data-priority="4">Tenure</th>
-                                        <th data-priority="5" style="text-align: center;">Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Monthly Scheme</td>
-                                        <td>2.00%</td>
-                                        <td>12000.00</td>
-                                        <td>8 months</td>
-                                        <td style="text-align: center;">
-                                            <input type="checkbox">
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Quarterly Scheme</td>
-                                        <td>2.50%</td>
-                                        <td>12500.00</td>
-                                        <td>2 years 0 month</td>
-                                        <td style="text-align: center;">
-                                            <input type="checkbox">
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Annual Scheme</td>
-                                        <td>5.00%</td>
-                                        <td>12000.00</td>
-                                        <td>5 years 0 month</td>
-                                        <td style="text-align: center;">
-                                            <input type="checkbox">
-                                        </td>
-                                    </tr>
-                                </tbody>
-                                <tfoot>
-                                </tfoot>
-                            </table>
+                                <ul>
+                                    <li>
+                                        <p>Min.Deposit Amount : 2000</p>
+                                    </li>
+                                    <li>
+                                        <p> Min.Period : 1 Months </p>
+                                    </li>
+                                    <li>
+                                        <p>Interest Rate : 2%/month </p>
+                                    </li>
+                                    <li>
+                                        <p> Tenure Period : 5 Months </p>
+                                    </li>
+                                </ul>
+                                <hr style="border-color: #96f18a;">
+                                <button (click)="toPreview()" class="btn btn-success btn-block">Select</button>
+                            </div>
                         </div>
                     </div>
-                    <div class="button d-flex justify-content-center mt-2">
-                        <button *ngIf="!detailedInfo" type="button" class="btn btn-info mr-2"
-                            (click)="detailedInfo=!detailedInfo">Detailed
-                            Info</button>
-                        <button type="button" class="btn btn-danger" (click)="schemes=!schemes;form=!form">Back
-                        </button>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">annual scheme</h5>
+                            <hr style="border-color: #96f18a;">
+                            <div class="container">
+                                <p><b>Scheme Details:</b> </p>
+
+                                <ul>
+                                    <li>
+                                        <p>Min.Deposit Amount : 2000</p>
+                                    </li>
+                                    <li>
+                                        <p> Min.Period : 1 Months </p>
+                                    </li>
+                                    <li>
+                                        <p>Interest Rate : 2%/month </p>
+                                    </li>
+                                    <li>
+                                        <p> Tenure Period : 5 Months </p>
+                                    </li>
+                                </ul>
+                                <hr style="border-color: #96f18a;">
+                                <button (click)="toPreview()" class="btn btn-success btn-block">Select</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- deposit summary or preview -->
-                <div *ngIf="preview" class="preview">
-                    <label class="card-title">Review Your Recurring deposit details</label>
-                    <hr>
-                    <div class="row">
-                        <div class="col-sm-3">
-                            <label class="mb-0">Name</label>
-                        </div>
-                        <div class="col-sm-9 ">
-                            <label>Kenneth Valdez</label>
-                        </div>
+                <!-- detailed info tables -->
+                <div *ngIf="detailedInfo" class="detailed-info mt-4">
+                    <h5 class="card-title">General Public FD Rate</h5>
+                    <div class="table-responsive" data-pattern="priority-columns">
+                        <table class="table table-bordered table-hover">
+                            <thead style="background-color: rgb(192, 192, 192);">
+                                <tr>
+                                    <th data-priority="1">Scheme Name</th>
+                                    <th data-priority="2">Interest</th>
+                                    <th data-priority="3">Deposit Amount</th>
+                                    <th data-priority="4">Tenure</th>
+                                    <th data-priority="5" style="text-align: center;">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Monthly Scheme</td>
+                                    <td>2.00%</td>
+                                    <td>12000.00</td>
+                                    <td>8 months</td>
+                                    <td style="text-align: center;">
+                                        <input type="checkbox">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Quarterly Scheme</td>
+                                    <td>2.50%</td>
+                                    <td>12500.00</td>
+                                    <td>2 years 0 month</td>
+                                    <td style="text-align: center;">
+                                        <input type="checkbox">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Annual Scheme</td>
+                                    <td>5.00%</td>
+                                    <td>12000.00</td>
+                                    <td>5 years 0 month</td>
+                                    <td style="text-align: center;">
+                                        <input type="checkbox">
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                            </tfoot>
+                        </table>
                     </div>
-                    <hr>
-                    <div class="row">
-                        <div class="col-sm-3">
-                            <label class="mb-0">Deposit Amount</label>
-                        </div>
-                        <div class="col-sm-9 ">
-                            <label>Rs: 120000.00</label>
-                        </div>
+                    <br>
+                    <h5 class="card-title">Senior Citizens FD Rate</h5>
+                    <div class="table-responsive" data-pattern="priority-columns">
+                        <table class="table table-bordered table-hover">
+                            <thead style="background-color: rgb(192, 192, 192);">
+                                <tr>
+                                    <th data-priority="1">Scheme Name</th>
+                                    <th data-priority="2">Interest</th>
+                                    <th data-priority="3">Depoit Amount</th>
+                                    <th data-priority="4">Tenure</th>
+                                    <th data-priority="5" style="text-align: center;">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Monthly Scheme</td>
+                                    <td>2.00%</td>
+                                    <td>12000.00</td>
+                                    <td>8 months</td>
+                                    <td style="text-align: center;">
+                                        <input type="checkbox">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Quarterly Scheme</td>
+                                    <td>2.50%</td>
+                                    <td>12500.00</td>
+                                    <td>2 years 0 month</td>
+                                    <td style="text-align: center;">
+                                        <input type="checkbox">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Annual Scheme</td>
+                                    <td>5.00%</td>
+                                    <td>12000.00</td>
+                                    <td>5 years 0 month</td>
+                                    <td style="text-align: center;">
+                                        <input type="checkbox">
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                            </tfoot>
+                        </table>
                     </div>
-                    <hr>
-                    <div class="row">
-                        <div class="col-sm-3">
-                            <label class="mb-0">Account</label>
-                        </div>
-                        <div class="col-sm-9 ">
-                            <label>XXXXXXXXXXX9878</label>
-                        </div>
+                </div>
+                <div class="button d-flex justify-content-center mt-2">
+                    <button *ngIf="!detailedInfo" type="button" class="btn btn-info mr-2"
+                        (click)="detailedInfo=!detailedInfo">Detailed
+                        Info</button>
+                    <button type="button" class="btn btn-danger" (click)="schemes=!schemes;form=!form">Back
+                    </button>
+                </div>
+            </div>
+
+            <!-- deposit summary or preview -->
+            <div *ngIf="preview" class="preview">
+                <label class="card-title">Review Your Recurring deposit details</label>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <label class="mb-0">Name</label>
                     </div>
-                    <hr>
-                    <div class="row">
-                        <div class="col-sm-3">
-                            <label class="mb-0">Tenure</label>
-                        </div>
-                        <div class="col-sm-9 ">
-                            <label>1 year 0 month</label>
-                        </div>
+                    <div class="col-sm-9 ">
+                        <label>Kenneth Valdez</label>
                     </div>
-                    <hr>
-                    <div class="row">
-                        <div class="col-sm-3">
-                            <label class="mb-0">Maturity date</label>
-                        </div>
-                        <div class="col-sm-9">
-                            <label>12 JAN 2022</label>
-                        </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <label class="mb-0">Deposit Amount</label>
                     </div>
-                    <hr>
-                    <div class="row">
-                        <div class="col-sm-3">
-                            <label class="mb-0">Rate of interest</label>
-                        </div>
-                        <div class="col-sm-9">
-                            <label>6.00%</label>
-                        </div>
+                    <div class="col-sm-9 ">
+                        <label>Rs: 120000.00</label>
                     </div>
-                    <hr>
-                    <div class="row">
-                        <div class="col-sm-3">
-                            <label class="mb-0">Maturity Amount</label>
-                        </div>
-                        <div class="col-sm-9">
-                            <label>Rs: 123000.00</label>
-                        </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <label class="mb-0">Account</label>
                     </div>
-                    <div class="row">
-                        <div class="col-sm-12 mt-4">
-                            <button (click)="preview=!preview;schemes=!schemes"
-                                class="btn btn-danger mr-2 btn-fw">Back</button>
-                            <button class="btn btn-info btn-fw float-right">Confirm</button>
-                        </div>
+                    <div class="col-sm-9 ">
+                        <label>XXXXXXXXXXX9878</label>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <label class="mb-0">Tenure</label>
+                    </div>
+                    <div class="col-sm-9 ">
+                        <label>1 year 0 month</label>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <label class="mb-0">Maturity date</label>
+                    </div>
+                    <div class="col-sm-9">
+                        <label>12 JAN 2022</label>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <label class="mb-0">Rate of interest</label>
+                    </div>
+                    <div class="col-sm-9">
+                        <label>6.00%</label>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <label class="mb-0">Maturity Amount</label>
+                    </div>
+                    <div class="col-sm-9">
+                        <label>Rs: 123000.00</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 mt-4">
+                        <button (click)="preview=!preview;schemes=!schemes"
+                            class="btn btn-danger mr-2 btn-fw">Back</button>
+                        <button class="btn btn-info btn-fw float-right">Confirm</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 </div>
