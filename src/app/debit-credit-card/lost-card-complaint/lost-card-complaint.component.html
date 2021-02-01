@@ -1,23 +1,37 @@
-<div class="card">
-    <div class="card-body">
-        <h4 class="card-title">Lost Card Complaint</h4>
-        <br>
-        <form class="forms-sample">
-            <div class="form-group">
-                <label>Card Number</label>
-                <input type="text" class="form-control" id="firstName" placeholder="Enter Your Card Number" required>
-                <hr>
-                <label>Reason</label>
-                <select class="form-control">
-                    <option value="stolen">Stolen</option>
-                    <option value="Lost">Lost</option>
-                </select>
-                <hr>
-                <label>Description</label>
-                <textarea cols="30" rows="10" class="form-control"></textarea>
+<div class="row">
+    <div class="col-md-8">
+        <h1>Lost Card Complaint</h1>
+        <div class="card">
+            <div class="card-body">
+                <form class="forms-sample">
+                    <div class="form-group">
+                        <label>Card Number</label>
+                        <input type="text" class="form-control" id="firstName" placeholder="Enter Your Card Number"
+                            required>
+                        <hr>
+                        <label>Reason</label>
+                        <select class="form-control">
+                            <option value="stolen">Stolen</option>
+                            <option value="Lost">Lost</option>
+                        </select>
+                        <hr>
+                        <label>Description</label>
+                        <textarea cols="20" rows="10" class="form-control"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-success mr-2">Submit</button>
+                </form>
             </div>
-            <hr>
-            <button type="submit" class="btn btn-success mr-2">Submit</button>
-        </form>
+        </div>
+    </div>
+    <div class="col-md-4 card-block">
+        <h1>Card Block</h1>
+        <img style="z-index: 1  ;position: relative; width: 230px;"
+            src="https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/rewards/card-faces/prime-amex-card-face.png"
+            alt="credit-card">
+        <p>***********1234</p>
+        <p>valid until 02/25</p><br>
+        <p>domestic daily limit</p>
+        <p>ATM withdrawal: ₹50,000.00</p>
+        <button class="btn btn-outline-danger">BLOCK THIS CARD</button>
     </div>
 </div>

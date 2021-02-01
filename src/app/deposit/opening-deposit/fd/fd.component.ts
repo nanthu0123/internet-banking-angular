@@ -9,7 +9,12 @@ export class FDComponent implements OnInit {
 
   form: boolean = true;
   schemes: Boolean = false;
+  detailedInfo: Boolean = false;
   preview: boolean = false;
+
+  // payment method 
+  selectedTransMethod: string;
+  state: Boolean = false;
 
   constructor() { }
 
@@ -23,5 +28,12 @@ export class FDComponent implements OnInit {
   toPreview() {
     this.preview = true;
     this.schemes = false;
+  }
+
+  // payment method
+  selectOption(eventVal) {
+    console.log(eventVal);
+    this.selectedTransMethod = eventVal;
+    this.state = true;
   }
 }

@@ -20,7 +20,6 @@
         <i class="mdi mdi-home menu-icon"></i>
       </a>
     </li>
-    <!-- additional nav-items start -->
 
     <!-- Accounts -->
     <li class="nav-item">
@@ -59,43 +58,9 @@
 
     <!-- deposits -->
     <li class="nav-item">
-      <a class="nav-link" (click)="depositsCollapsed = !depositsCollapsed" [attr.aria-expanded]="depositsCollapsed"
-        aria-controls="auth">
+      <a class="nav-link" routerLink="Deposit/opening-deposit">
         <span class="menu-title">Deposits</span>
-        <i class="menu-arrow"></i>
       </a>
-      <div class="collapse" [ngbCollapse]="!depositsCollapsed">
-        <ul class="nav flex-column sub-menu">
-          <li class="nav-item">
-            <a class="nav-link" routerLink="Deposit/deposit-scheme" routerLinkActive="active"
-              #accountoverview="routerLinkActive">Deposit Scheme</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="Deposit/deposit-condition" routerLinkActive="active"
-              #accountoverview="routerLinkActive">Deposit Condition</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="Deposit/bank-deposit" routerLinkActive="active"
-              #accountoverview="routerLinkActive">Bank Deposit</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="Deposit/user-deposit" routerLinkActive="active"
-              #accountoverview="routerLinkActive">User Deposits</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="Deposit/opening-deposit" routerLinkActive="active"
-              #accountoverview="routerLinkActive">Opening Deposits</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="Deposit/Deposit-summary" routerLinkActive="active"
-              #accountoverview="routerLinkActive">Deposits Account Summary</a>
-          </li>
-          <!-- <li class="nav-item">            
-            <a class="nav-link" routerLink="Deposit/Nominee" routerLinkActive="active"
-            #accountoverview="routerLinkActive">Nominee</a>
-          </li> -->
-        </ul>
-      </div>
     </li>
 
     <!-- Loan -->

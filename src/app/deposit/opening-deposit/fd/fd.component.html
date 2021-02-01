@@ -3,32 +3,50 @@
         <div class="card">
             <div class="card-body">
 
-                <div *ngIf="form">
+                <form *ngIf="form">
                     <label class="card-title">Open Fixed deposit</label>
                     <hr>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <label class="mb-0">Maturity Month</label>
+                        </div>
+                        <div class="col-sm-4">
+                            <input type="month" class="form-control" autofocus>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <label class="mb-0">Deposit Type</label>
+                        </div>
+                        <div class="col-sm-4">
+                            <select class="form-control">
+                                <option disabled selected hidden>Choose Deposit Type</option>
+                                <option>Fixed Deposit</option>
+                                <option>Recurring Deposit</option>
+                            </select>
+                        </div>
+                    </div>
+                    <br>
                     <div class="row">
                         <div class="col-sm-3">
                             <label class="mb-0">Deposit Amount</label>
                         </div>
                         <div class="col-sm-4">
-                            <input type="number" class="form-control" autofocus>
+                            <input type="number" class="form-control" placeholder="Deposit Amount">
+
                         </div>
                     </div>
-                    <br>
                     <br>
                     <div class="row">
                         <div class="col-sm-3">
-                            <label class="mb-0">From which account would you like to continue</label>
+                            <label class="mb-0">Scheme ID</label>
                         </div>
                         <div class="col-sm-4">
-                            <select class="form-control">
-                                <option disabled selected hidden>Choose Account Number</option>
-                                <option>XXXXXXXXXXXXX9879</option>
-                                <option>XXXXXXXXXXXXX8789</option>
-                            </select>
+                            <input type="number" class="form-control" placeholder="Scheme ID">
+
                         </div>
                     </div>
-                    <br>
                     <br>
                     <div class="row">
                         <div class="col-sm-3">
@@ -42,32 +60,52 @@
                                 <option disabled selected hidden>Relationship with Depositor</option>
                                 <option>Mother</option>
                                 <option>Father</option>
-                                <option>sibiling</option>
+                                <option>Siblings</option>
                             </select>
                         </div>
                     </div>
-                    <br>
                     <br>
                     <div class="row">
                         <div class="col-sm-3">
-                            <label class="mb-0">For how long would you like to save</label>
+                            <label class="mb-0">Return Payment Details</label>
                         </div>
                         <div class="col-sm-4">
-                            <select class="form-control">
-                                <option disabled selected hidden>select year</option>
-                                <option>1 year</option>
-                                <option>2 year</option>
+                            <select class="form-control" (change)="selectOption($event.target.value)">
+                                <option disabled selected hidden>Return Payment Method</option>
+                                <option>DD</option>
+                                <option>Account</option>
                             </select>
                         </div>
-                        <div class="col-sm-4">
-                            <select class="form-control">
-                                <option disabled selected hidden>select month</option>
-                                <option>0 month</option>
-                                <option>1 month</option>
-                            </select>
+                        <div *ngIf="state" class="col-sm-4">
+                            <input class="form-control" type="text" placeholder="Enter {{selectedTransMethod}} Number">
                         </div>
                     </div>
                     <br>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <label class="mb-0">User Details</label>
+                        </div>
+                        <div class="col-sm-4">
+                            <select class="form-control">
+                                <option disabled selected hidden>Choose User Type</option>
+                                <option>Current Account Holder</option>
+                                <option>Savings Account Holder</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-4">
+                            <input class="form-control" type="text" placeholder="Enter User ID">
+
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <label class="mb-0">User Account Number</label>
+                        </div>
+                        <div class="col-sm-4">
+                            <input type="number" class="form-control" placeholder="Enter User Account Number">
+                        </div>
+                    </div>
                     <br>
                     <div class="row">
                         <div class="col-sm-12">
@@ -75,8 +113,8 @@
                             </button>
                         </div>
                     </div>
-                </div>
-
+                </form>
+                <!-- schemes card -->
                 <div *ngIf="schemes" class="schemes-container">
                     <h1 class="card-title">Schemes</h1>
                     <hr>
@@ -160,13 +198,111 @@
                             </div>
                         </div>
                     </div>
-                    <div class="button d-flex justify-content-center">
+
+                    <!-- detailed info tables -->
+                    <div *ngIf="detailedInfo" class="detailed-info mt-4">
+                        <h5 class="card-title">General Public FD Rate</h5>
+                        <div class="table-responsive" data-pattern="priority-columns">
+                            <table class="table table-bordered table-hover">
+                                <thead style="background-color: rgb(192, 192, 192);">
+                                    <tr>
+                                        <th data-priority="1">Scheme Name</th>
+                                        <th data-priority="2">Interest</th>
+                                        <th data-priority="3">Deposit Amount</th>
+                                        <th data-priority="4">Tenure</th>
+                                        <th data-priority="5" style="text-align: center;">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Monthly Scheme</td>
+                                        <td>2.00%</td>
+                                        <td>12000.00</td>
+                                        <td>8 months</td>
+                                        <td style="text-align: center;">
+                                            <input type="checkbox">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Quarterly Scheme</td>
+                                        <td>2.50%</td>
+                                        <td>12500.00</td>
+                                        <td>2 years 0 month</td>
+                                        <td style="text-align: center;">
+                                            <input type="checkbox">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Annual Scheme</td>
+                                        <td>5.00%</td>
+                                        <td>12000.00</td>
+                                        <td>5 years 0 month</td>
+                                        <td style="text-align: center;">
+                                            <input type="checkbox">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                </tfoot>
+                            </table>
+                        </div>
+                        <br>
+                        <h5 class="card-title">Senior Citizens FD Rate</h5>
+                        <div class="table-responsive" data-pattern="priority-columns">
+                            <table class="table table-bordered table-hover">
+                                <thead style="background-color: rgb(192, 192, 192);">
+                                    <tr>
+                                        <th data-priority="1">Scheme Name</th>
+                                        <th data-priority="2">Interest</th>
+                                        <th data-priority="3">Depoit Amount</th>
+                                        <th data-priority="4">Tenure</th>
+                                        <th data-priority="5" style="text-align: center;">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Monthly Scheme</td>
+                                        <td>2.00%</td>
+                                        <td>12000.00</td>
+                                        <td>8 months</td>
+                                        <td style="text-align: center;">
+                                            <input type="checkbox">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Quarterly Scheme</td>
+                                        <td>2.50%</td>
+                                        <td>12500.00</td>
+                                        <td>2 years 0 month</td>
+                                        <td style="text-align: center;">
+                                            <input type="checkbox">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Annual Scheme</td>
+                                        <td>5.00%</td>
+                                        <td>12000.00</td>
+                                        <td>5 years 0 month</td>
+                                        <td style="text-align: center;">
+                                            <input type="checkbox">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="button d-flex justify-content-center mt-2">
+                        <button *ngIf="!detailedInfo" type="button" class="btn btn-info mr-2"
+                            (click)="detailedInfo=!detailedInfo">Detailed
+                            Info</button>
                         <button type="button" class="btn btn-danger" (click)="schemes=!schemes;form=!form">Back
                         </button>
                     </div>
                 </div>
 
-
+                <!-- deposit summary or preview -->
                 <div *ngIf="preview" class="preview">
                     <label class="card-title">Review Your Recurring deposit details</label>
                     <hr>

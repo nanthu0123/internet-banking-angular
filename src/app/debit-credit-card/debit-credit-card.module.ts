@@ -5,6 +5,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MatStepperModule } from '@angular/material/stepper';
 import { PopoverModule } from "ngx-smart-popover";
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatCardModule } from '@angular/material/card';
 import { ApplyNewCardComponent } from './apply-new-card/apply-new-card.component';
 import { LostCardComplaintComponent } from './lost-card-complaint/lost-card-complaint.component';
 import { CardSatusComponent } from './card-satus/card-satus.component';
@@ -27,6 +28,7 @@ const routes: Routes = [
     MatStepperModule,
     PopoverModule,
     MatDialogModule,
+    MatCardModule,
     RouterModule.forChild(routes),
   ]
 })
